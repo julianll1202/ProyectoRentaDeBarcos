@@ -377,7 +377,7 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_actualizarCliente
             // 
-            this.btn_actualizarCliente.Location = new System.Drawing.Point(683, 298);
+            this.btn_actualizarCliente.Location = new System.Drawing.Point(526, 298);
             this.btn_actualizarCliente.Name = "btn_actualizarCliente";
             this.btn_actualizarCliente.Size = new System.Drawing.Size(75, 23);
             this.btn_actualizarCliente.TabIndex = 26;

@@ -44,6 +44,8 @@ namespace ProyectoRentaDeBarcos
         string nom;
         string cap, tar, anio, largo, prop;
 
+        string ap, am, tel, email, st, col, cd, est, cp;
+
         public InterfazV2()
         {
             InitializeComponent();
@@ -304,14 +306,8 @@ namespace ProyectoRentaDeBarcos
 
         private void btn_actualizarCliente_Click(object sender, EventArgs e)
         {
-            cargarDatosCliente();
-
-            if (mClienteConsultas.modificarCliente(mCliente))
-            {
-                MessageBox.Show("Cliente Modificado");
-                cargarClientes();
-                LimpiarCamposClientes();
-            }
+            var form_act_cliente = new ActCliente(num,nom,ap,am,tel,email,st,col,cd,est,cp);
+            form_act_cliente.ShowDialog();
         }
 
         private void dgv_registroClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -322,17 +318,17 @@ namespace ProyectoRentaDeBarcos
         private void dgv_registroClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgv_registroClientes.Rows[e.RowIndex];
-            tb_NumCliente.Text = Convert.ToString(fila.Cells["ColumnNumCliente"].Value);
-            tb_NombreCliente.Text = Convert.ToString(fila.Cells["nombre"].Value);
-            tb_apellidoP.Text = Convert.ToString(fila.Cells["apellidoP"].Value);
-            tb_apellidoM.Text = Convert.ToString(fila.Cells["apellidoM"].Value);
-            tb_telefono.Text = Convert.ToString(fila.Cells["telefono"].Value);
-            tb_correo.Text = Convert.ToString(fila.Cells["correo"].Value);
-            tb_ciudad.Text = Convert.ToString(fila.Cells["ciudad"].Value);
-            tb_estado.Text = Convert.ToString(fila.Cells["estado"].Value);
-            tb_calle.Text = Convert.ToString(fila.Cells["calle"].Value);
-            tb_colonia.Text = Convert.ToString(fila.Cells["colonia"].Value);
-            tb_codigoPostal.Text = Convert.ToString(fila.Cells["codigoPostal"].Value);
+            num = Convert.ToString(fila.Cells["ColumnNumCliente"].Value);
+            nom = Convert.ToString(fila.Cells["nombre"].Value);
+            ap = Convert.ToString(fila.Cells["apellidoP"].Value);
+            am = Convert.ToString(fila.Cells["apellidoM"].Value);
+            tel = Convert.ToString(fila.Cells["telefono"].Value);
+            email = Convert.ToString(fila.Cells["correo"].Value);
+            cd = Convert.ToString(fila.Cells["ciudad"].Value);
+            est = Convert.ToString(fila.Cells["estado"].Value);
+            st = Convert.ToString(fila.Cells["calle"].Value);
+            col = Convert.ToString(fila.Cells["colonia"].Value);
+            cp = Convert.ToString(fila.Cells["codigoPostal"].Value);
         }
 
         private void btn_eliminarCliente_Click(object sender, EventArgs e)
@@ -1054,7 +1050,7 @@ namespace ProyectoRentaDeBarcos
 
         private void ref_btn_Click(object sender, EventArgs e)
         {
-            cargarDatosCliente();
+            cargarClientes();
         }
 
         private void tb_tarifa_KeyPress(object sender, KeyPressEventArgs e)
