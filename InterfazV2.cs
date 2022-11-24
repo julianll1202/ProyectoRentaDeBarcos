@@ -246,63 +246,22 @@ namespace ProyectoRentaDeBarcos
             cargarClientes(tb_buscarClientes.Text.Trim());
         }
 
-        private void btn_agregarCliente_Click(object sender, EventArgs e)
-        {
-            cargarDatosCliente();
-
-            if (mClienteConsultas.agregarCliente(mCliente))
-            {
-                MessageBox.Show("Cliente Agregado");
-                cargarClientes();
-                LimpiarCamposClientes();
-            }
-        }
-
-        private void LimpiarCamposClientes()
-        {
-            tb_NumCliente.Text = "";
-            tb_NombreCliente.Text = "";
-            tb_apellidoP.Text = "";
-            tb_apellidoM.Text = "";
-            tb_telefono.Text = "";
-            tb_correo.Text = "";
-            tb_ciudad.Text = "";
-            tb_estado.Text = "";
-            tb_calle.Text = "";
-            tb_colonia.Text = "";
-            tb_codigoPostal.Text = "";
-        }
-
         private void cargarDatosCliente()
         {
-            mCliente.NumCliente = getFolioClienteIfExist();
-            mCliente.nombreCliente = tb_NombreCliente.Text.Trim();
-            mCliente.apellidoP = tb_apellidoP.Text.Trim();
-            mCliente.apellidoM = tb_apellidoM.Text.Trim();
-            mCliente.telefono = tb_telefono.Text.Trim();
-            mCliente.correo = tb_correo.Text.Trim();
-            mCliente.ciudad = tb_ciudad.Text.Trim();
-            mCliente.estado = tb_estado.Text.Trim();
-            mCliente.calle = tb_calle.Text.Trim();
-            mCliente.colonia = tb_colonia.Text.Trim();
-            mCliente.codigoPostal = tb_codigoPostal.Text.Trim();
+            mCliente.NumCliente = int.Parse(num);
+            mCliente.nombreCliente = nom;
+            mCliente.apellidoP = ap;
+            mCliente.apellidoM = am;
+            mCliente.telefono = tel;
+            mCliente.correo = email;
+            mCliente.ciudad = cd;
+            mCliente.estado = est;
+            mCliente.calle = st;
+            mCliente.colonia = col;
+            mCliente.codigoPostal = cp;
         }
 
-        private int getFolioClienteIfExist()
-        {
-            if (!tb_NumCliente.Text.Trim().Equals(""))
-            {
-                if (int.TryParse(tb_NumCliente.Text.Trim(), out int folio))
-                {
-                    return folio;
-                }
-                else return -1;
-            }
-            else
-            {
-                return -1;
-            }
-        }
+        
 
         private void btn_actualizarCliente_Click(object sender, EventArgs e)
         {
@@ -333,12 +292,6 @@ namespace ProyectoRentaDeBarcos
 
         private void btn_eliminarCliente_Click(object sender, EventArgs e)
         {
-            if (getFolioClienteIfExist() == -1)
-            {
-                return;
-            }
-
-
             if (MessageBox.Show("¿Desea eliminar el cliente?", "Eliminar cliente", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 cargarDatosCliente();
@@ -347,16 +300,11 @@ namespace ProyectoRentaDeBarcos
                 {
                     MessageBox.Show("Cliente Eliminado");
                     cargarClientes();
-                    LimpiarCamposClientes();
+                    
                 }
             }
         }
-
-        private void btn_limpiarCliente_Click(object sender, EventArgs e)
-        {
-            LimpiarCamposClientes();
-        }
-
+       
         private void btn_salirCliente_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -1011,6 +959,17 @@ namespace ProyectoRentaDeBarcos
                     LimpiarCamposTripulaciones();
                 }
             }
+        }
+
+        private void n_emp_btn_Click(object sender, EventArgs e)
+        {
+            var form_n_emp = new NuevoEmp();
+            form_n_emp.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            cargarDatosEmpleado();
         }
 
         private void btn_limpiarT_Click(object sender, EventArgs e)

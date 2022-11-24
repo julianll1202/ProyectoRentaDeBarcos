@@ -111,6 +111,12 @@
     <Compile Include="NuevoCliente.Designer.cs">
       <DependentUpon>NuevoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevoEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoEmp.Designer.cs">
+      <DependentUpon>NuevoEmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validar.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteConsultas.cs" />
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoCliente.resx">
       <DependentUpon>NuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoEmp.resx">
+      <DependentUpon>NuevoEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -49,29 +49,6 @@ namespace ProyectoRentaDeBarcos
             this.btn_actualizarCliente = new System.Windows.Forms.Button();
             this.btn_eliminarCliente = new System.Windows.Forms.Button();
             this.btn_salirCliente = new System.Windows.Forms.Button();
-            this.btn_agregarCliente = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.tb_NombreCliente = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.tb_apellidoP = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.tb_apellidoM = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.tb_telefono = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tb_correo = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tb_ciudad = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tb_estado = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tb_calle = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tb_colonia = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tb_codigoPostal = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tb_NumCliente = new System.Windows.Forms.TextBox();
             this.tabRentas = new System.Windows.Forms.TabPage();
             this.label43 = new System.Windows.Forms.Label();
             this.tb_buscarRentas = new System.Windows.Forms.TextBox();
@@ -197,8 +174,10 @@ namespace ProyectoRentaDeBarcos
             this.label45 = new System.Windows.Forms.Label();
             this.tb_cargo = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.btn_Actualizar = new System.Windows.Forms.Button();
+            this.n_emp_btn = new System.Windows.Forms.Button();
             this.ref_btn = new System.Windows.Forms.Button();
+            this.btn_Actualizar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.ncliente_btn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_registroClientes)).BeginInit();
@@ -239,29 +218,6 @@ namespace ProyectoRentaDeBarcos
             this.ncliente_btn.Controls.Add(this.btn_actualizarCliente);
             this.ncliente_btn.Controls.Add(this.btn_eliminarCliente);
             this.ncliente_btn.Controls.Add(this.btn_salirCliente);
-            this.ncliente_btn.Controls.Add(this.btn_agregarCliente);
-            this.ncliente_btn.Controls.Add(this.label19);
-            this.ncliente_btn.Controls.Add(this.tb_NombreCliente);
-            this.ncliente_btn.Controls.Add(this.label18);
-            this.ncliente_btn.Controls.Add(this.tb_apellidoP);
-            this.ncliente_btn.Controls.Add(this.label17);
-            this.ncliente_btn.Controls.Add(this.tb_apellidoM);
-            this.ncliente_btn.Controls.Add(this.label16);
-            this.ncliente_btn.Controls.Add(this.tb_telefono);
-            this.ncliente_btn.Controls.Add(this.label15);
-            this.ncliente_btn.Controls.Add(this.tb_correo);
-            this.ncliente_btn.Controls.Add(this.label14);
-            this.ncliente_btn.Controls.Add(this.tb_ciudad);
-            this.ncliente_btn.Controls.Add(this.label13);
-            this.ncliente_btn.Controls.Add(this.tb_estado);
-            this.ncliente_btn.Controls.Add(this.label12);
-            this.ncliente_btn.Controls.Add(this.tb_calle);
-            this.ncliente_btn.Controls.Add(this.label11);
-            this.ncliente_btn.Controls.Add(this.tb_colonia);
-            this.ncliente_btn.Controls.Add(this.label10);
-            this.ncliente_btn.Controls.Add(this.tb_codigoPostal);
-            this.ncliente_btn.Controls.Add(this.label9);
-            this.ncliente_btn.Controls.Add(this.tb_NumCliente);
             this.ncliente_btn.Location = new System.Drawing.Point(4, 22);
             this.ncliente_btn.Name = "ncliente_btn";
             this.ncliente_btn.Padding = new System.Windows.Forms.Padding(3);
@@ -273,7 +229,7 @@ namespace ProyectoRentaDeBarcos
             // 
             // ncliente
             // 
-            this.ncliente.Location = new System.Drawing.Point(526, 248);
+            this.ncliente.Location = new System.Drawing.Point(6, 234);
             this.ncliente.Name = "ncliente";
             this.ncliente.Size = new System.Drawing.Size(146, 23);
             this.ncliente.TabIndex = 30;
@@ -377,7 +333,7 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_actualizarCliente
             // 
-            this.btn_actualizarCliente.Location = new System.Drawing.Point(526, 298);
+            this.btn_actualizarCliente.Location = new System.Drawing.Point(175, 234);
             this.btn_actualizarCliente.Name = "btn_actualizarCliente";
             this.btn_actualizarCliente.Size = new System.Drawing.Size(75, 23);
             this.btn_actualizarCliente.TabIndex = 26;
@@ -387,7 +343,7 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_eliminarCliente
             // 
-            this.btn_eliminarCliente.Location = new System.Drawing.Point(683, 356);
+            this.btn_eliminarCliente.Location = new System.Drawing.Point(279, 234);
             this.btn_eliminarCliente.Name = "btn_eliminarCliente";
             this.btn_eliminarCliente.Size = new System.Drawing.Size(75, 23);
             this.btn_eliminarCliente.TabIndex = 25;
@@ -404,202 +360,6 @@ namespace ProyectoRentaDeBarcos
             this.btn_salirCliente.Text = "Salir";
             this.btn_salirCliente.UseVisualStyleBackColor = true;
             this.btn_salirCliente.Click += new System.EventHandler(this.btn_salirCliente_Click);
-            // 
-            // btn_agregarCliente
-            // 
-            this.btn_agregarCliente.Location = new System.Drawing.Point(683, 245);
-            this.btn_agregarCliente.Name = "btn_agregarCliente";
-            this.btn_agregarCliente.Size = new System.Drawing.Size(75, 23);
-            this.btn_agregarCliente.TabIndex = 22;
-            this.btn_agregarCliente.Text = "Agregar";
-            this.btn_agregarCliente.UseVisualStyleBackColor = true;
-            this.btn_agregarCliente.Click += new System.EventHandler(this.btn_agregarCliente_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(66, 280);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(42, 13);
-            this.label19.TabIndex = 21;
-            this.label19.Text = "nombre";
-            // 
-            // tb_NombreCliente
-            // 
-            this.tb_NombreCliente.Location = new System.Drawing.Point(35, 301);
-            this.tb_NombreCliente.Name = "tb_NombreCliente";
-            this.tb_NombreCliente.Size = new System.Drawing.Size(100, 20);
-            this.tb_NombreCliente.TabIndex = 20;
-            this.tb_NombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_NombreCliente_KeyPress);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(66, 338);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(50, 13);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "apellidoP";
-            // 
-            // tb_apellidoP
-            // 
-            this.tb_apellidoP.Location = new System.Drawing.Point(35, 359);
-            this.tb_apellidoP.Name = "tb_apellidoP";
-            this.tb_apellidoP.Size = new System.Drawing.Size(100, 20);
-            this.tb_apellidoP.TabIndex = 18;
-            this.tb_apellidoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_apellidoP_KeyPress);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(192, 227);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 13);
-            this.label17.TabIndex = 17;
-            this.label17.Text = "apellidoM";
-            // 
-            // tb_apellidoM
-            // 
-            this.tb_apellidoM.Location = new System.Drawing.Point(161, 248);
-            this.tb_apellidoM.Name = "tb_apellidoM";
-            this.tb_apellidoM.Size = new System.Drawing.Size(100, 20);
-            this.tb_apellidoM.TabIndex = 16;
-            this.tb_apellidoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_apellidoM_KeyPress);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(192, 280);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 13);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "telefono";
-            // 
-            // tb_telefono
-            // 
-            this.tb_telefono.Location = new System.Drawing.Point(161, 301);
-            this.tb_telefono.Name = "tb_telefono";
-            this.tb_telefono.Size = new System.Drawing.Size(100, 20);
-            this.tb_telefono.TabIndex = 14;
-            this.tb_telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_telefono_KeyPress);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(192, 338);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 13);
-            this.label15.TabIndex = 13;
-            this.label15.Text = "correo";
-            // 
-            // tb_correo
-            // 
-            this.tb_correo.Location = new System.Drawing.Point(161, 359);
-            this.tb_correo.Name = "tb_correo";
-            this.tb_correo.Size = new System.Drawing.Size(100, 20);
-            this.tb_correo.TabIndex = 12;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(320, 227);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 13);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "ciudad";
-            // 
-            // tb_ciudad
-            // 
-            this.tb_ciudad.Location = new System.Drawing.Point(289, 248);
-            this.tb_ciudad.Name = "tb_ciudad";
-            this.tb_ciudad.Size = new System.Drawing.Size(100, 20);
-            this.tb_ciudad.TabIndex = 10;
-            this.tb_ciudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_ciudad_KeyPress);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(320, 280);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 13);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "estado";
-            // 
-            // tb_estado
-            // 
-            this.tb_estado.Location = new System.Drawing.Point(289, 301);
-            this.tb_estado.Name = "tb_estado";
-            this.tb_estado.Size = new System.Drawing.Size(100, 20);
-            this.tb_estado.TabIndex = 8;
-            this.tb_estado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_estado_KeyPress);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(320, 338);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(29, 13);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "calle";
-            // 
-            // tb_calle
-            // 
-            this.tb_calle.Location = new System.Drawing.Point(289, 359);
-            this.tb_calle.Name = "tb_calle";
-            this.tb_calle.Size = new System.Drawing.Size(100, 20);
-            this.tb_calle.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(451, 227);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "colonia";
-            // 
-            // tb_colonia
-            // 
-            this.tb_colonia.Location = new System.Drawing.Point(420, 248);
-            this.tb_colonia.Name = "tb_colonia";
-            this.tb_colonia.Size = new System.Drawing.Size(100, 20);
-            this.tb_colonia.TabIndex = 4;
-            this.tb_colonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_colonia_KeyPress);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(451, 280);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 13);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "codigoPostal";
-            // 
-            // tb_codigoPostal
-            // 
-            this.tb_codigoPostal.Location = new System.Drawing.Point(420, 301);
-            this.tb_codigoPostal.Name = "tb_codigoPostal";
-            this.tb_codigoPostal.Size = new System.Drawing.Size(100, 20);
-            this.tb_codigoPostal.TabIndex = 2;
-            this.tb_codigoPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_codigoPostal_KeyPress);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(66, 227);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "NumCliente";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // tb_NumCliente
-            // 
-            this.tb_NumCliente.Location = new System.Drawing.Point(35, 248);
-            this.tb_NumCliente.Name = "tb_NumCliente";
-            this.tb_NumCliente.ReadOnly = true;
-            this.tb_NumCliente.Size = new System.Drawing.Size(100, 20);
-            this.tb_NumCliente.TabIndex = 0;
             // 
             // tabRentas
             // 
@@ -661,7 +421,7 @@ namespace ProyectoRentaDeBarcos
             this.Barco});
             this.dgv_registroRentas.Location = new System.Drawing.Point(6, 39);
             this.dgv_registroRentas.Name = "dgv_registroRentas";
-            this.dgv_registroRentas.Size = new System.Drawing.Size(962, 196);
+            this.dgv_registroRentas.Size = new System.Drawing.Size(642, 196);
             this.dgv_registroRentas.TabIndex = 17;
             this.dgv_registroRentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroRentas_CellClick);
             // 
@@ -995,6 +755,8 @@ namespace ProyectoRentaDeBarcos
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.n_emp_btn);
             this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.tb_buscarEmpleado);
             this.tabPage1.Controls.Add(this.dgv_registroEmpleado);
@@ -1060,7 +822,7 @@ namespace ProyectoRentaDeBarcos
             this.puesto});
             this.dgv_registroEmpleado.Location = new System.Drawing.Point(8, 42);
             this.dgv_registroEmpleado.Name = "dgv_registroEmpleado";
-            this.dgv_registroEmpleado.Size = new System.Drawing.Size(960, 189);
+            this.dgv_registroEmpleado.Size = new System.Drawing.Size(842, 189);
             this.dgv_registroEmpleado.TabIndex = 21;
             this.dgv_registroEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroEmpleado_CellClick);
             // 
@@ -1347,7 +1109,7 @@ namespace ProyectoRentaDeBarcos
             this.correoPropietario});
             this.dgv_registroPropietario.Location = new System.Drawing.Point(6, 38);
             this.dgv_registroPropietario.Name = "dgv_registroPropietario";
-            this.dgv_registroPropietario.Size = new System.Drawing.Size(962, 189);
+            this.dgv_registroPropietario.Size = new System.Drawing.Size(642, 189);
             this.dgv_registroPropietario.TabIndex = 17;
             this.dgv_registroPropietario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroPropietario_CellClick);
             // 
@@ -1586,7 +1348,7 @@ namespace ProyectoRentaDeBarcos
             this.tarifa});
             this.dgv_registroT.Location = new System.Drawing.Point(8, 42);
             this.dgv_registroT.Name = "dgv_registroT";
-            this.dgv_registroT.Size = new System.Drawing.Size(960, 193);
+            this.dgv_registroT.Size = new System.Drawing.Size(442, 193);
             this.dgv_registroT.TabIndex = 13;
             this.dgv_registroT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroT_CellClick);
             // 
@@ -1728,16 +1490,15 @@ namespace ProyectoRentaDeBarcos
             this.label44.TabIndex = 0;
             this.label44.Text = "cargo";
             // 
-            // btn_Actualizar
+            // n_emp_btn
             // 
-            this.btn_Actualizar.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
-            this.btn_Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Actualizar.Location = new System.Drawing.Point(945, 13);
-            this.btn_Actualizar.Name = "btn_Actualizar";
-            this.btn_Actualizar.Size = new System.Drawing.Size(23, 23);
-            this.btn_Actualizar.TabIndex = 6;
-            this.btn_Actualizar.UseVisualStyleBackColor = true;
-            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
+            this.n_emp_btn.Location = new System.Drawing.Point(419, 257);
+            this.n_emp_btn.Name = "n_emp_btn";
+            this.n_emp_btn.Size = new System.Drawing.Size(136, 23);
+            this.n_emp_btn.TabIndex = 24;
+            this.n_emp_btn.Text = "Nuevo Empleado";
+            this.n_emp_btn.UseVisualStyleBackColor = true;
+            this.n_emp_btn.Click += new System.EventHandler(this.n_emp_btn_Click);
             // 
             // ref_btn
             // 
@@ -1750,6 +1511,28 @@ namespace ProyectoRentaDeBarcos
             this.ref_btn.TabIndex = 31;
             this.ref_btn.UseVisualStyleBackColor = false;
             this.ref_btn.Click += new System.EventHandler(this.ref_btn_Click);
+            // 
+            // btn_Actualizar
+            // 
+            this.btn_Actualizar.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.btn_Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Actualizar.Location = new System.Drawing.Point(945, 13);
+            this.btn_Actualizar.Name = "btn_Actualizar";
+            this.btn_Actualizar.Size = new System.Drawing.Size(23, 23);
+            this.btn_Actualizar.TabIndex = 6;
+            this.btn_Actualizar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(827, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 23);
+            this.button1.TabIndex = 25;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // InterfazV2
             // 
@@ -1812,29 +1595,6 @@ namespace ProyectoRentaDeBarcos
         private System.Windows.Forms.Button btn_actualizarCliente;
         private System.Windows.Forms.Button btn_eliminarCliente;
         private System.Windows.Forms.Button btn_salirCliente;
-        private System.Windows.Forms.Button btn_agregarCliente;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox tb_NombreCliente;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox tb_apellidoP;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox tb_apellidoM;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox tb_telefono;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox tb_correo;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox tb_ciudad;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox tb_estado;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox tb_calle;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tb_colonia;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tb_codigoPostal;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tb_NumCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoP;
@@ -1957,5 +1717,7 @@ namespace ProyectoRentaDeBarcos
         private System.Windows.Forms.Button n_barco;
         private System.Windows.Forms.Button act_barco;
         private System.Windows.Forms.Button ref_btn;
+        private System.Windows.Forms.Button n_emp_btn;
+        private System.Windows.Forms.Button button1;
     }
 }
