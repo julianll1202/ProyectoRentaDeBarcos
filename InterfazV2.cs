@@ -45,6 +45,7 @@ namespace ProyectoRentaDeBarcos
         string cap, tar, anio, largo, prop;
 
         string ap, am, tel, email, st, col, cd, est, cp;
+        string r, p;
 
         public InterfazV2()
         {
@@ -390,94 +391,36 @@ namespace ProyectoRentaDeBarcos
             cargarEmpleados(tb_buscarEmpleado.Text.Trim());
         }
 
-        private void btn_agregarEmpleado_Click(object sender, EventArgs e)
-        {
-            tb_rfc.Text = tb_rfc.Text.ToUpper();
-            cargarDatosEmpleado();
-
-            if (mEmpleadoConsultas.agregarEmpleado(mEmpleado))
-            {
-                MessageBox.Show("Empleado Agregado");
-                cargarEmpleados();
-                LimpiarCamposEmpleados();
-            }
-        }
-
-        private void LimpiarCamposEmpleados()
-        {
-            tb_NumEmpleado.Text = "";
-            tb_nombreEmpleado.Text = "";
-            tb_apellidoPEmpelado.Text = "";
-            tb_apellidoMEmpleado.Text = "";
-            tb_rfc.Text = "";
-            tb_telefonoEmpleado.Text = "";
-            tb_correoEmpleado.Text = "";
-            tb_puesto.Text = "";
-        }
-
+               
         private void cargarDatosEmpleado()
         {
-            mEmpleado.NumEmpleado = getFolioEmpleadoIfExist();
-            mEmpleado.nombreEmpleado = tb_nombreEmpleado.Text.Trim();
-            mEmpleado.apellidoPEmpleado = tb_apellidoPEmpelado.Text.Trim();
-            mEmpleado.apellidoMEmpleado = tb_apellidoMEmpleado.Text.Trim();
-            mEmpleado.rfc = tb_rfc.Text.Trim();
-            mEmpleado.telefonoEmpleado = tb_telefonoEmpleado.Text.Trim();
-            mEmpleado.correoEmpleado = tb_correoEmpleado.Text.Trim();
-            mEmpleado.puesto = tb_puesto.Text.Trim();
+            mEmpleado.NumEmpleado = int.Parse(num);
+            mEmpleado.nombreEmpleado = nom;
+            mEmpleado.apellidoPEmpleado = ap;
+            mEmpleado.apellidoMEmpleado = am;
+            mEmpleado.rfc = r;
+            mEmpleado.telefonoEmpleado = tel;
+            mEmpleado.correoEmpleado = email;
+            mEmpleado.puesto = p;
         }
 
-        private int getFolioEmpleadoIfExist()
-        {
-            if (!tb_NumEmpleado.Text.Trim().Equals(""))
-            {
-                if (int.TryParse(tb_NumEmpleado.Text.Trim(), out int folio))
-                {
-                    return folio;
-                }
-                else return -1;
-            }
-            else
-            {
-                return -1;
-            }
-        }
-
-        private void btn_actualizarEmpleado_Click(object sender, EventArgs e)
-        {
-            tb_rfc.Text = tb_rfc.Text.ToUpper();
-
-            cargarDatosEmpleado();
-
-            if (mEmpleadoConsultas.modificarEmpleado(mEmpleado))
-            {
-                MessageBox.Show("Empleado Modificado");
-                cargarEmpleados();
-                LimpiarCamposEmpleados();
-            }
-        }
-
+                
         private void dgv_registroEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgv_registroEmpleado.Rows[e.RowIndex];
-            tb_NumEmpleado.Text = Convert.ToString(fila.Cells["NumEmpleado"].Value);
-            tb_nombreEmpleado.Text = Convert.ToString(fila.Cells["nombreEmpleado"].Value);
-            tb_apellidoPEmpelado.Text = Convert.ToString(fila.Cells["apellidoPEmpleado"].Value);
-            tb_apellidoMEmpleado.Text = Convert.ToString(fila.Cells["apellidoMEmpleado"].Value);
-            tb_rfc.Text = Convert.ToString(fila.Cells["rfc"].Value);
-            tb_telefonoEmpleado.Text = Convert.ToString(fila.Cells["telefonoEmpleado"].Value);
-            tb_correoEmpleado.Text = Convert.ToString(fila.Cells["correoEmpleado"].Value);
-            tb_puesto.Text = Convert.ToString(fila.Cells["puesto"].Value);
+            num = Convert.ToString(fila.Cells["NumEmpleado"].Value);
+            nom = Convert.ToString(fila.Cells["nombreEmpleado"].Value);
+            ap = Convert.ToString(fila.Cells["apellidoPEmpleado"].Value);
+            am = Convert.ToString(fila.Cells["apellidoMEmpleado"].Value);
+           r = Convert.ToString(fila.Cells["rfc"].Value);
+            tel = Convert.ToString(fila.Cells["telefonoEmpleado"].Value);
+            email = Convert.ToString(fila.Cells["correoEmpleado"].Value);
+            p = Convert.ToString(fila.Cells["puesto"].Value);
         }
 
         private void btn_eliminarEmpleado_Click(object sender, EventArgs e)
         {
-            if (getFolioEmpleadoIfExist() == -1)
-            {
-                return;
-            }
-
-
+          
             if (MessageBox.Show("¿Desea eliminar el empleado?", "Eliminar empleado", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 cargarDatosEmpleado();
@@ -486,16 +429,11 @@ namespace ProyectoRentaDeBarcos
                 {
                     MessageBox.Show("Empleado Eliminado");
                     cargarEmpleados();
-                    LimpiarCamposEmpleados();
+                    
                 }
             }
         }
-
-        private void btn_limpiarEmpleado_Click(object sender, EventArgs e)
-        {
-            LimpiarCamposEmpleados();
-        }
-
+                
         private void btn_salirEmpleado_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -967,9 +905,15 @@ namespace ProyectoRentaDeBarcos
             form_n_emp.ShowDialog();
         }
 
+        private void act_btn_Click(object sender, EventArgs e)
+        {
+            var form_act_emp = new ActEmp(num, nom, ap, am, tel, email, r, p);
+            form_act_emp.ShowDialog();
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
-            cargarDatosEmpleado();
+            cargarEmpleados();
         }
 
         private void btn_limpiarT_Click(object sender, EventArgs e)

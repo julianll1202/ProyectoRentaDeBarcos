@@ -97,6 +97,12 @@
     <Compile Include="ActCliente.Designer.cs">
       <DependentUpon>ActCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActEmp.Designer.cs">
+      <DependentUpon>ActEmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Barco.cs" />
     <Compile Include="BarcoConsultas.cs" />
     <Compile Include="NuevoBarco.cs">
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ActCliente.resx">
       <DependentUpon>ActCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActEmp.resx">
+      <DependentUpon>ActEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazV2.resx">
       <DependentUpon>InterfazV2.cs</DependentUpon>

@@ -31,6 +31,7 @@ namespace ProyectoRentaDeBarcos
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ncliente_btn = new System.Windows.Forms.TabPage();
+            this.ref_btn = new System.Windows.Forms.Button();
             this.ncliente = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.tb_buscarClientes = new System.Windows.Forms.TextBox();
@@ -93,7 +94,10 @@ namespace ProyectoRentaDeBarcos
             this.ColumnTarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCapacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnOcupado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Actualizar = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.n_emp_btn = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
             this.tb_buscarEmpleado = new System.Windows.Forms.TextBox();
             this.dgv_registroEmpleado = new System.Windows.Forms.DataGridView();
@@ -106,26 +110,7 @@ namespace ProyectoRentaDeBarcos
             this.correoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_salirEmpleado = new System.Windows.Forms.Button();
-            this.btn_limpiarEmpleado = new System.Windows.Forms.Button();
             this.btn_eliminarEmpleado = new System.Windows.Forms.Button();
-            this.btn_actualizarEmpleado = new System.Windows.Forms.Button();
-            this.btn_agregarEmpleado = new System.Windows.Forms.Button();
-            this.tb_correoEmpleado = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.tb_puesto = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.tb_apellidoMEmpleado = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.tb_rfc = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.tb_telefonoEmpleado = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.tb_NumEmpleado = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.tb_nombreEmpleado = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tb_apellidoPEmpelado = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label36 = new System.Windows.Forms.Label();
             this.tb_buscarPropietario = new System.Windows.Forms.TextBox();
@@ -174,10 +159,7 @@ namespace ProyectoRentaDeBarcos
             this.label45 = new System.Windows.Forms.Label();
             this.tb_cargo = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.n_emp_btn = new System.Windows.Forms.Button();
-            this.ref_btn = new System.Windows.Forms.Button();
-            this.btn_Actualizar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.act_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.ncliente_btn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_registroClientes)).BeginInit();
@@ -226,6 +208,18 @@ namespace ProyectoRentaDeBarcos
             this.ncliente_btn.Text = "Clientes";
             this.ncliente_btn.UseVisualStyleBackColor = true;
             this.ncliente_btn.Click += new System.EventHandler(this.tabClientes_Click);
+            // 
+            // ref_btn
+            // 
+            this.ref_btn.BackColor = System.Drawing.Color.Transparent;
+            this.ref_btn.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.ref_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ref_btn.Location = new System.Drawing.Point(945, 3);
+            this.ref_btn.Name = "ref_btn";
+            this.ref_btn.Size = new System.Drawing.Size(23, 23);
+            this.ref_btn.TabIndex = 31;
+            this.ref_btn.UseVisualStyleBackColor = false;
+            this.ref_btn.Click += new System.EventHandler(this.ref_btn_Click);
             // 
             // ncliente
             // 
@@ -753,34 +747,27 @@ namespace ProyectoRentaDeBarcos
             this.ColumnOcupado.HeaderText = "ocupado";
             this.ColumnOcupado.Name = "ColumnOcupado";
             // 
+            // btn_Actualizar
+            // 
+            this.btn_Actualizar.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.btn_Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Actualizar.Location = new System.Drawing.Point(945, 13);
+            this.btn_Actualizar.Name = "btn_Actualizar";
+            this.btn_Actualizar.Size = new System.Drawing.Size(23, 23);
+            this.btn_Actualizar.TabIndex = 6;
+            this.btn_Actualizar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
+            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.act_btn);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.n_emp_btn);
             this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.tb_buscarEmpleado);
             this.tabPage1.Controls.Add(this.dgv_registroEmpleado);
             this.tabPage1.Controls.Add(this.btn_salirEmpleado);
-            this.tabPage1.Controls.Add(this.btn_limpiarEmpleado);
             this.tabPage1.Controls.Add(this.btn_eliminarEmpleado);
-            this.tabPage1.Controls.Add(this.btn_actualizarEmpleado);
-            this.tabPage1.Controls.Add(this.btn_agregarEmpleado);
-            this.tabPage1.Controls.Add(this.tb_correoEmpleado);
-            this.tabPage1.Controls.Add(this.label27);
-            this.tabPage1.Controls.Add(this.tb_puesto);
-            this.tabPage1.Controls.Add(this.label28);
-            this.tabPage1.Controls.Add(this.tb_apellidoMEmpleado);
-            this.tabPage1.Controls.Add(this.label24);
-            this.tabPage1.Controls.Add(this.tb_rfc);
-            this.tabPage1.Controls.Add(this.label25);
-            this.tabPage1.Controls.Add(this.tb_telefonoEmpleado);
-            this.tabPage1.Controls.Add(this.label26);
-            this.tabPage1.Controls.Add(this.tb_NumEmpleado);
-            this.tabPage1.Controls.Add(this.label23);
-            this.tabPage1.Controls.Add(this.tb_nombreEmpleado);
-            this.tabPage1.Controls.Add(this.label22);
-            this.tabPage1.Controls.Add(this.tb_apellidoPEmpelado);
-            this.tabPage1.Controls.Add(this.label21);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -789,6 +776,27 @@ namespace ProyectoRentaDeBarcos
             this.tabPage1.Text = "Empleados";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(827, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 23);
+            this.button1.TabIndex = 25;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // n_emp_btn
+            // 
+            this.n_emp_btn.Location = new System.Drawing.Point(8, 246);
+            this.n_emp_btn.Name = "n_emp_btn";
+            this.n_emp_btn.Size = new System.Drawing.Size(136, 23);
+            this.n_emp_btn.TabIndex = 24;
+            this.n_emp_btn.Text = "Nuevo Empleado";
+            this.n_emp_btn.UseVisualStyleBackColor = true;
+            this.n_emp_btn.Click += new System.EventHandler(this.n_emp_btn_Click);
             // 
             // label29
             // 
@@ -876,16 +884,6 @@ namespace ProyectoRentaDeBarcos
             this.btn_salirEmpleado.UseVisualStyleBackColor = true;
             this.btn_salirEmpleado.Click += new System.EventHandler(this.btn_salirEmpleado_Click);
             // 
-            // btn_limpiarEmpleado
-            // 
-            this.btn_limpiarEmpleado.Location = new System.Drawing.Point(719, 257);
-            this.btn_limpiarEmpleado.Name = "btn_limpiarEmpleado";
-            this.btn_limpiarEmpleado.Size = new System.Drawing.Size(75, 23);
-            this.btn_limpiarEmpleado.TabIndex = 19;
-            this.btn_limpiarEmpleado.Text = "Limpiar";
-            this.btn_limpiarEmpleado.UseVisualStyleBackColor = true;
-            this.btn_limpiarEmpleado.Click += new System.EventHandler(this.btn_limpiarEmpleado_Click);
-            // 
             // btn_eliminarEmpleado
             // 
             this.btn_eliminarEmpleado.Location = new System.Drawing.Point(584, 361);
@@ -895,160 +893,6 @@ namespace ProyectoRentaDeBarcos
             this.btn_eliminarEmpleado.Text = "Eliminar";
             this.btn_eliminarEmpleado.UseVisualStyleBackColor = true;
             this.btn_eliminarEmpleado.Click += new System.EventHandler(this.btn_eliminarEmpleado_Click);
-            // 
-            // btn_actualizarEmpleado
-            // 
-            this.btn_actualizarEmpleado.Location = new System.Drawing.Point(584, 309);
-            this.btn_actualizarEmpleado.Name = "btn_actualizarEmpleado";
-            this.btn_actualizarEmpleado.Size = new System.Drawing.Size(75, 23);
-            this.btn_actualizarEmpleado.TabIndex = 17;
-            this.btn_actualizarEmpleado.Text = "Actualizar";
-            this.btn_actualizarEmpleado.UseVisualStyleBackColor = true;
-            this.btn_actualizarEmpleado.Click += new System.EventHandler(this.btn_actualizarEmpleado_Click);
-            // 
-            // btn_agregarEmpleado
-            // 
-            this.btn_agregarEmpleado.Location = new System.Drawing.Point(584, 256);
-            this.btn_agregarEmpleado.Name = "btn_agregarEmpleado";
-            this.btn_agregarEmpleado.Size = new System.Drawing.Size(75, 23);
-            this.btn_agregarEmpleado.TabIndex = 16;
-            this.btn_agregarEmpleado.Text = "Agregar";
-            this.btn_agregarEmpleado.UseVisualStyleBackColor = true;
-            this.btn_agregarEmpleado.Click += new System.EventHandler(this.btn_agregarEmpleado_Click);
-            // 
-            // tb_correoEmpleado
-            // 
-            this.tb_correoEmpleado.Location = new System.Drawing.Point(274, 259);
-            this.tb_correoEmpleado.Name = "tb_correoEmpleado";
-            this.tb_correoEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.tb_correoEmpleado.TabIndex = 15;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(304, 239);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(37, 13);
-            this.label27.TabIndex = 14;
-            this.label27.Text = "correo";
-            // 
-            // tb_puesto
-            // 
-            this.tb_puesto.Location = new System.Drawing.Point(274, 312);
-            this.tb_puesto.Name = "tb_puesto";
-            this.tb_puesto.Size = new System.Drawing.Size(100, 20);
-            this.tb_puesto.TabIndex = 13;
-            this.tb_puesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_puesto_KeyPress);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(304, 292);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(39, 13);
-            this.label28.TabIndex = 12;
-            this.label28.Text = "puesto";
-            // 
-            // tb_apellidoMEmpleado
-            // 
-            this.tb_apellidoMEmpleado.Location = new System.Drawing.Point(148, 259);
-            this.tb_apellidoMEmpleado.Name = "tb_apellidoMEmpleado";
-            this.tb_apellidoMEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.tb_apellidoMEmpleado.TabIndex = 11;
-            this.tb_apellidoMEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_apellidoMEmpleado_KeyPress);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(178, 239);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(52, 13);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "apellidoM";
-            // 
-            // tb_rfc
-            // 
-            this.tb_rfc.Location = new System.Drawing.Point(148, 312);
-            this.tb_rfc.Name = "tb_rfc";
-            this.tb_rfc.Size = new System.Drawing.Size(100, 20);
-            this.tb_rfc.TabIndex = 9;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(178, 292);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(19, 13);
-            this.label25.TabIndex = 8;
-            this.label25.Text = "rfc";
-            // 
-            // tb_telefonoEmpleado
-            // 
-            this.tb_telefonoEmpleado.Location = new System.Drawing.Point(148, 364);
-            this.tb_telefonoEmpleado.Name = "tb_telefonoEmpleado";
-            this.tb_telefonoEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.tb_telefonoEmpleado.TabIndex = 7;
-            this.tb_telefonoEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_telefonoEmpleado_KeyPress);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(178, 344);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(45, 13);
-            this.label26.TabIndex = 6;
-            this.label26.Text = "telefono";
-            // 
-            // tb_NumEmpleado
-            // 
-            this.tb_NumEmpleado.Location = new System.Drawing.Point(22, 259);
-            this.tb_NumEmpleado.Name = "tb_NumEmpleado";
-            this.tb_NumEmpleado.ReadOnly = true;
-            this.tb_NumEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.tb_NumEmpleado.TabIndex = 5;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(52, 239);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(76, 13);
-            this.label23.TabIndex = 4;
-            this.label23.Text = "NumEmpleado";
-            // 
-            // tb_nombreEmpleado
-            // 
-            this.tb_nombreEmpleado.Location = new System.Drawing.Point(22, 312);
-            this.tb_nombreEmpleado.Name = "tb_nombreEmpleado";
-            this.tb_nombreEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.tb_nombreEmpleado.TabIndex = 3;
-            this.tb_nombreEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_nombreEmpleado_KeyPress);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(52, 292);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(42, 13);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "nombre";
-            // 
-            // tb_apellidoPEmpelado
-            // 
-            this.tb_apellidoPEmpelado.Location = new System.Drawing.Point(22, 364);
-            this.tb_apellidoPEmpelado.Name = "tb_apellidoPEmpelado";
-            this.tb_apellidoPEmpelado.Size = new System.Drawing.Size(100, 20);
-            this.tb_apellidoPEmpelado.TabIndex = 1;
-            this.tb_apellidoPEmpelado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_apellidoPEmpelado_KeyPress);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(52, 344);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(50, 13);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "apellidoP";
             // 
             // tabPage2
             // 
@@ -1490,49 +1334,15 @@ namespace ProyectoRentaDeBarcos
             this.label44.TabIndex = 0;
             this.label44.Text = "cargo";
             // 
-            // n_emp_btn
+            // act_btn
             // 
-            this.n_emp_btn.Location = new System.Drawing.Point(419, 257);
-            this.n_emp_btn.Name = "n_emp_btn";
-            this.n_emp_btn.Size = new System.Drawing.Size(136, 23);
-            this.n_emp_btn.TabIndex = 24;
-            this.n_emp_btn.Text = "Nuevo Empleado";
-            this.n_emp_btn.UseVisualStyleBackColor = true;
-            this.n_emp_btn.Click += new System.EventHandler(this.n_emp_btn_Click);
-            // 
-            // ref_btn
-            // 
-            this.ref_btn.BackColor = System.Drawing.Color.Transparent;
-            this.ref_btn.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
-            this.ref_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ref_btn.Location = new System.Drawing.Point(945, 3);
-            this.ref_btn.Name = "ref_btn";
-            this.ref_btn.Size = new System.Drawing.Size(23, 23);
-            this.ref_btn.TabIndex = 31;
-            this.ref_btn.UseVisualStyleBackColor = false;
-            this.ref_btn.Click += new System.EventHandler(this.ref_btn_Click);
-            // 
-            // btn_Actualizar
-            // 
-            this.btn_Actualizar.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
-            this.btn_Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Actualizar.Location = new System.Drawing.Point(945, 13);
-            this.btn_Actualizar.Name = "btn_Actualizar";
-            this.btn_Actualizar.Size = new System.Drawing.Size(23, 23);
-            this.btn_Actualizar.TabIndex = 6;
-            this.btn_Actualizar.UseVisualStyleBackColor = true;
-            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(827, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 25;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.act_btn.Location = new System.Drawing.Point(162, 246);
+            this.act_btn.Name = "act_btn";
+            this.act_btn.Size = new System.Drawing.Size(75, 23);
+            this.act_btn.TabIndex = 26;
+            this.act_btn.Text = "Actualizar";
+            this.act_btn.UseVisualStyleBackColor = true;
+            this.act_btn.Click += new System.EventHandler(this.act_btn_Click);
             // 
             // InterfazV2
             // 
@@ -1607,30 +1417,11 @@ namespace ProyectoRentaDeBarcos
         private System.Windows.Forms.DataGridViewTextBoxColumn colonia;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoPostal;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox tb_nombreEmpleado;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox tb_apellidoPEmpelado;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox tb_buscarEmpleado;
         private System.Windows.Forms.DataGridView dgv_registroEmpleado;
         private System.Windows.Forms.Button btn_salirEmpleado;
-        private System.Windows.Forms.Button btn_limpiarEmpleado;
         private System.Windows.Forms.Button btn_eliminarEmpleado;
-        private System.Windows.Forms.Button btn_actualizarEmpleado;
-        private System.Windows.Forms.Button btn_agregarEmpleado;
-        private System.Windows.Forms.TextBox tb_correoEmpleado;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox tb_puesto;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox tb_apellidoMEmpleado;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox tb_rfc;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox tb_telefonoEmpleado;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox tb_NumEmpleado;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPEmpleado;
@@ -1719,5 +1510,6 @@ namespace ProyectoRentaDeBarcos
         private System.Windows.Forms.Button ref_btn;
         private System.Windows.Forms.Button n_emp_btn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button act_btn;
     }
 }
