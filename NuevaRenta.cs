@@ -20,10 +20,12 @@ namespace ProyectoRentaDeBarcos
    
         List<int> clientes, barcos;
 
-        
+       
+
         public NuevaRenta()
         {
             InitializeComponent();
+            
         }
 
         private void cargarDatosRenta()

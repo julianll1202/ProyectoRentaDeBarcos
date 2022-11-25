@@ -641,14 +641,8 @@ namespace ProyectoRentaDeBarcos
 
         private void btn_actualizarRenta_Click(object sender, EventArgs e)
         {
-            
-
-            if (mRentaConsultas.modificarRenta(mRenta))
-            {
-                MessageBox.Show("Renta Modificada");
-                cargarRentas();
-                
-            }
+            var form_act_renta = new ActRenta(num, fr, fi, ff, c, b);
+            form_act_renta.ShowDialog();
         }
 
         private void dgv_registroRentas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -664,11 +658,12 @@ namespace ProyectoRentaDeBarcos
 
         private void btn_eliminarRenta_Click(object sender, EventArgs e)
         {
+            cargarDatosRenta();
+
             if (getFolioRentaIfExist() == -1)
             {
                 return;
             }
-
 
             if (MessageBox.Show("¿Desea eliminar la renta?", "Eliminar renta", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -712,7 +707,7 @@ namespace ProyectoRentaDeBarcos
             mTripulaciones.Clear();
             mTripulaciones = mTripulacionConsultas.getTripulaciones(filtro);
 
-            for (int i = 0; i < mRentas.Count(); i++)
+            for (int i = 0; i < mTripulaciones.Count(); i++)
             {
                 dgv_registroT.RowTemplate.Height = 20;
                 dgv_registroT.Rows.Add(
