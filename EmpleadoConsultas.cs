@@ -72,8 +72,7 @@ namespace ProyectoRentaDeBarcos
 
         internal bool agregarEmpleado(Empleado mEmpleado)
         {
-            string INSERT = "INSERT INTO empleados(nombre, apellidoP, apellidoM, rfc, telefono, correo, puesto) " +
-                "values (@nombre, @apellidoP, @apellidoM, @rfc, @telefono, @correo, @puesto);";
+            string INSERT = "CALL nuevoEmpleado(@nombre, @apellidoP, @apellidoM, @rfc, @telefono, @correo, @puesto);";
 
             MySqlCommand mCommand = new MySqlCommand(INSERT, conexionMysql.GetConnection());
 

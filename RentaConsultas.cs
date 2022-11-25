@@ -21,11 +21,12 @@ namespace ProyectoRentaDeBarcos
 
         public List<Renta> getRentas(string filtro)
         {
-            string QUERY = "SELECT * FROM rentas ";
+            string QUERY = "SELECT * FROM rentas;";
             MySqlDataReader mReader = null;
 
             try
             {
+                
                 if (filtro != "")
                 {
                     QUERY += " WHERE " +
@@ -36,6 +37,7 @@ namespace ProyectoRentaDeBarcos
                         "Cliente LIKE '%" + filtro + "%' OR " +
                         "Barco LIKE '%" + filtro + "%';";
                 }
+                
 
                 MySqlCommand mComando = new MySqlCommand(QUERY);
                 mComando.Connection = conexionMysql.GetConnection();
@@ -47,9 +49,9 @@ namespace ProyectoRentaDeBarcos
                 {
                     mRenta = new Renta();
                     mRenta.NumRenta = mReader.GetInt16("NumRenta");
-                    mRenta.fechaRenta = mReader.GetString("fechaRenta");
-                    mRenta.fechaInicio = mReader.GetString("fechaInicio");
-                    mRenta.fechaFin = mReader.GetString("fechaFin");
+                    mRenta.fechaRenta = mReader.GetDateTime("fechaRenta");
+                    mRenta.fechaInicio = mReader.GetDateTime("fechaInicio");
+                    mRenta.fechaFin = mReader.GetDateTime("fechaFin");
                     mRenta.Cliente = mReader.GetInt16("Cliente");
                     mRenta.Barco = mReader.GetInt16("Barco");
                     mRentas.Add(mRenta);
@@ -68,8 +70,7 @@ namespace ProyectoRentaDeBarcos
 
         internal bool agregarRenta(Renta mRenta)
         {
-            string INSERT = "INSERT INTO rentas(fechaRenta, fechaInicio, fechaFin, Cliente, Barco) " +
-                "values (@fechaRenta, @fechaInicio, @fechaFin, @Cliente, @Barco);";
+            string INSERT = "CALL nuevaRenta(@fechaInicio, @fechaFin, @Cliente, @Barco);";
 
             MySqlCommand mCommand = new MySqlCommand(INSERT, conexionMysql.GetConnection());
 

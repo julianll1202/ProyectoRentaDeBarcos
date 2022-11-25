@@ -1,7 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +18,10 @@ namespace ProyectoRentaDeBarcos
         {
             conexionMysql = new ConexionMySQL();
             mClientes = new List<Cliente>();
+            
         }
+
+        
 
         public List<Cliente> getClientes(string filtro)
         {
@@ -75,6 +80,30 @@ namespace ProyectoRentaDeBarcos
             return mClientes;
         }
 
+        public List<int> getClientesDisponibles()
+        {
+            List<int> clientes = new List<int>();
+            string QUERY = "CALL getNumCliente();";
+            MySqlDataReader mReader = null;
+            try
+            {
+            MySqlCommand mComando = new MySqlCommand(QUERY);
+            mComando.Connection = conexionMysql.GetConnection();
+            mReader = mComando.ExecuteReader();
+
+            while (mReader.Read())
+            {
+                clientes.Add(mReader.GetInt16("NumCliente"));
+            }
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+
+            return clientes;
+                       
+        }
         internal bool agregarCliente(Cliente mCliente)
         {
             string INSERT = "CALL nuevoCliente(@nombre, @apellidoP, @apellidoM, @telefono, @correo, @ciudad, @estado, @calle, @colonia, @codigoPostal);";

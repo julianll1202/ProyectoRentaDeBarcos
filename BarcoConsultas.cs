@@ -71,6 +71,30 @@ namespace ProyectoRentaDeBarcos
             return mBarcos;
         }
 
+        public List<int> getBarcosDisponibles()
+        {
+            List<int> barcos = new List<int>();
+            string QUERY = "CALL getBarcosDisponibles();";
+            MySqlDataReader mReader = null;
+            try
+            {
+                MySqlCommand mComando = new MySqlCommand(QUERY);
+                mComando.Connection = conexionMysql.GetConnection();
+                mReader = mComando.ExecuteReader();
+
+                while (mReader.Read())
+                {
+                    barcos.Add(mReader.GetInt16("NumBarco"));
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return barcos;
+
+        }
         internal bool agregarBarco(Barco mBarco)
         {
             string INSERT = "CALL nuevoBarco(@propietario, @nombre, @modelo, @anio, @largo_Pies, @tarifaRenta, @capacidad);";

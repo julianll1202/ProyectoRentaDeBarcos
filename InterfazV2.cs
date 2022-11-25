@@ -46,7 +46,8 @@ namespace ProyectoRentaDeBarcos
 
         string ap, am, tel, email, st, col, cd, est, cp;
         string r, p;
-
+        string c, b;
+        DateTime fr, fi, ff;
         public InterfazV2()
         {
             InitializeComponent();
@@ -493,83 +494,44 @@ namespace ProyectoRentaDeBarcos
 
         private void btn_agregarPropietario_Click(object sender, EventArgs e)
         {
-            cargarDatosPropietario();
-
-            if (mPropietarioConsultas.agregarPropietario(mPropietario))
-            {
-                MessageBox.Show("Propietario Agregado");
-                cargarPropietarios();
-                LimpiarCamposPropietarios();
-            }
+            var form_n_prop = new NuevoProp();
+            form_n_prop.ShowDialog();
         }
 
-        private void LimpiarCamposPropietarios()
-        {
-            tb_IdPropietario.Text = "";
-            tb_nombrePropietario.Text = "";
-            tb_apellidoPPropietario.Text = "";
-            tb_apellidoMPropietario.Text = "";
-            tb_telefonoPropietario.Text = "";
-            tb_correoPropietario.Text = "";
-        }
+        
 
         private void cargarDatosPropietario()
         {
-            mPropietario.IdPropietario = getFolioPropietarioIfExist();
-            mPropietario.nombrePropietario = tb_nombrePropietario.Text.Trim();
-            mPropietario.apellidoPPropietario = tb_apellidoPPropietario.Text.Trim();
-            mPropietario.apellidoMPropietario = tb_apellidoMPropietario.Text.Trim();
-            mPropietario.telefonoPropietario = tb_telefonoPropietario.Text.Trim();
-            mPropietario.correoPropietario = tb_correoPropietario.Text.Trim();
+            mPropietario.IdPropietario = int.Parse(num);
+            mPropietario.nombrePropietario = nom;
+            mPropietario.apellidoPPropietario = ap;
+            mPropietario.apellidoMPropietario = am;
+            mPropietario.telefonoPropietario = tel;
+            mPropietario.correoPropietario = email;
         }
 
-        private int getFolioPropietarioIfExist()
-        {
-            if (!tb_IdPropietario.Text.Trim().Equals(""))
-            {
-                if (int.TryParse(tb_IdPropietario.Text.Trim(), out int folio))
-                {
-                    return folio;
-                }
-                else return -1;
-            }
-            else
-            {
-                return -1;
-            }
-        }
+        
 
         private void btn_actualizarPropietario_Click(object sender, EventArgs e)
         {
-            cargarDatosPropietario();
-
-            if (mPropietarioConsultas.modificarPropietario(mPropietario))
-            {
-                MessageBox.Show("Propietario Modificado");
-                cargarPropietarios();
-                LimpiarCamposPropietarios();
-            }
+            var form_act_prop = new ActProp(num, nom, ap, am, tel, email);
+            form_act_prop.ShowDialog();
         }
 
         private void dgv_registroPropietario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgv_registroPropietario.Rows[e.RowIndex];
-            tb_IdPropietario.Text = Convert.ToString(fila.Cells["IdPropietario"].Value);
-            tb_nombrePropietario.Text = Convert.ToString(fila.Cells["nombrePropietario"].Value);
-            tb_apellidoPPropietario.Text = Convert.ToString(fila.Cells["apellidoPPropietario"].Value);
-            tb_apellidoMPropietario.Text = Convert.ToString(fila.Cells["apellidoMPropietario"].Value);
-            tb_telefonoPropietario.Text = Convert.ToString(fila.Cells["telefonoPropietario"].Value);
-            tb_correoPropietario.Text = Convert.ToString(fila.Cells["correoPropietario"].Value);
+            num = Convert.ToString(fila.Cells["IdPropietario"].Value);
+            nom = Convert.ToString(fila.Cells["nombrePropietario"].Value);
+            ap = Convert.ToString(fila.Cells["apellidoPPropietario"].Value);
+            am = Convert.ToString(fila.Cells["apellidoMPropietario"].Value);
+            tel = Convert.ToString(fila.Cells["telefonoPropietario"].Value);
+            email = Convert.ToString(fila.Cells["correoPropietario"].Value);
         }
 
         private void btn_eliminarPropietario_Click(object sender, EventArgs e)
         {
-            if (getFolioPropietarioIfExist() == -1)
-            {
-                return;
-            }
-
-
+            
             if (MessageBox.Show("¿Desea eliminar el propietario?", "Eliminar propietario", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 cargarDatosPropietario();
@@ -578,16 +540,11 @@ namespace ProyectoRentaDeBarcos
                 {
                     MessageBox.Show("Propietario Eliminado");
                     cargarPropietarios();
-                    LimpiarCamposPropietarios();
+                   
                 }
             }
         }
-
-        private void btn_limpiarPropietario_Click(object sender, EventArgs e)
-        {
-            LimpiarCamposPropietarios();
-        }
-
+                
         private void btn_salirPropietario_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -652,41 +609,25 @@ namespace ProyectoRentaDeBarcos
 
         private void btn_agregarRenta_Click(object sender, EventArgs e)
         {
-            cargarDatosRenta();
-
-            if (mRentaConsultas.agregarRenta(mRenta))
-            {
-                MessageBox.Show("Renta Agregado");
-                cargarRentas();
-                LimpiarCamposRentas();
-            }
+            var form_n_renta = new NuevaRenta();
+            form_n_renta.ShowDialog();
         }
-
-        private void LimpiarCamposRentas()
-        {
-            tb_NumRenta.Text = "";
-            tb_fechaRenta.Text = "";
-            tb_fechaInicio.Text = "";
-            tb_fechaFin.Text = "";
-            tb_Cliente.Text = "";
-            tb_Barco.Text = "";
-        }
-
+            
         private void cargarDatosRenta()
         {
-            mRenta.NumRenta = getFolioRentaIfExist();
-            mRenta.fechaRenta = tb_fechaRenta.Text.Trim();
-            mRenta.fechaInicio = tb_fechaInicio.Text.Trim();
-            mRenta.fechaFin = tb_fechaFin.Text.Trim();
-            mRenta.Cliente = int.Parse(tb_Cliente.Text.Trim());
-            mRenta.Barco = int.Parse(tb_Barco.Text.Trim());
+            mRenta.NumRenta = int.Parse(num);
+            mRenta.fechaRenta = fr;
+            mRenta.fechaInicio = fi;
+            mRenta.fechaFin = ff;
+            mRenta.Cliente = int.Parse(c);
+            mRenta.Barco = int.Parse(b);
         }
 
         private int getFolioRentaIfExist()
         {
-            if (!tb_NumRenta.Text.Trim().Equals(""))
+            if (!num.Equals(""))
             {
-                if (int.TryParse(tb_NumRenta.Text.Trim(), out int folio))
+                if (int.TryParse(num, out int folio))
                 {
                     return folio;
                 }
@@ -700,25 +641,25 @@ namespace ProyectoRentaDeBarcos
 
         private void btn_actualizarRenta_Click(object sender, EventArgs e)
         {
-            cargarDatosRenta();
+            
 
             if (mRentaConsultas.modificarRenta(mRenta))
             {
                 MessageBox.Show("Renta Modificada");
                 cargarRentas();
-                LimpiarCamposRentas();
+                
             }
         }
 
         private void dgv_registroRentas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgv_registroRentas.Rows[e.RowIndex];
-            tb_NumRenta.Text = Convert.ToString(fila.Cells["NumRenta"].Value);
-            tb_fechaRenta.Text = Convert.ToString(fila.Cells["fechaRenta"].Value);
-            tb_fechaInicio.Text = Convert.ToString(fila.Cells["fechaInicio"].Value);
-            tb_fechaFin.Text = Convert.ToString(fila.Cells["fechaFin"].Value);
-            tb_Cliente.Text = Convert.ToString(fila.Cells["Cliente"].Value);
-            tb_Barco.Text = Convert.ToString(fila.Cells["Barco"].Value);
+            num = Convert.ToString(fila.Cells["NumRenta"].Value);
+            fr = Convert.ToDateTime(fila.Cells["fechaRenta"].Value);
+            fi = Convert.ToDateTime(fila.Cells["fechaInicio"].Value);
+            ff = Convert.ToDateTime(fila.Cells["fechaFin"].Value);
+            c = Convert.ToString(fila.Cells["Cliente"].Value);
+            b = Convert.ToString(fila.Cells["Barco"].Value);
         }
 
         private void btn_eliminarRenta_Click(object sender, EventArgs e)
@@ -731,22 +672,17 @@ namespace ProyectoRentaDeBarcos
 
             if (MessageBox.Show("¿Desea eliminar la renta?", "Eliminar renta", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                cargarDatosRenta();
+                
 
                 if (mRentaConsultas.eliminarRenta(mRenta))
                 {
                     MessageBox.Show("Renta Eliminada");
                     cargarRentas();
-                    LimpiarCamposRentas();
+                    
                 }
             }
         }
-
-        private void btn_limpiarRenta_Click(object sender, EventArgs e)
-        {
-            LimpiarCamposRentas();
-        }
-
+                
         private void btn_salirRenta_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -909,6 +845,16 @@ namespace ProyectoRentaDeBarcos
         {
             var form_act_emp = new ActEmp(num, nom, ap, am, tel, email, r, p);
             form_act_emp.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cargarPropietarios();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cargarRentas();
         }
 
         private void button1_Click_1(object sender, EventArgs e)

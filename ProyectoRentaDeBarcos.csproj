@@ -103,8 +103,20 @@
     <Compile Include="ActEmp.Designer.cs">
       <DependentUpon>ActEmp.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActProp.Designer.cs">
+      <DependentUpon>ActProp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Barco.cs" />
     <Compile Include="BarcoConsultas.cs" />
+    <Compile Include="NuevaRenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaRenta.Designer.cs">
+      <DependentUpon>NuevaRenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoBarco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,12 @@
     </Compile>
     <Compile Include="NuevoEmp.Designer.cs">
       <DependentUpon>NuevoEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoProp.Designer.cs">
+      <DependentUpon>NuevoProp.cs</DependentUpon>
     </Compile>
     <Compile Include="Validar.cs" />
     <Compile Include="Cliente.cs" />
@@ -153,8 +171,14 @@
     <EmbeddedResource Include="ActEmp.resx">
       <DependentUpon>ActEmp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActProp.resx">
+      <DependentUpon>ActProp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfazV2.resx">
       <DependentUpon>InterfazV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaRenta.resx">
+      <DependentUpon>NuevaRenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoBarco.resx">
       <DependentUpon>NuevoBarco.cs</DependentUpon>
@@ -164,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoEmp.resx">
       <DependentUpon>NuevoEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoProp.resx">
+      <DependentUpon>NuevoProp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

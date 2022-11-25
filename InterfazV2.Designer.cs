@@ -61,22 +61,9 @@ namespace ProyectoRentaDeBarcos
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_salirRenta = new System.Windows.Forms.Button();
-            this.btn_limpiarRenta = new System.Windows.Forms.Button();
             this.btn_eliminarRenta = new System.Windows.Forms.Button();
             this.btn_actualizarRenta = new System.Windows.Forms.Button();
             this.btn_agregarRenta = new System.Windows.Forms.Button();
-            this.tb_Barco = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.tb_Cliente = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.tb_fechaFin = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.tb_NumRenta = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.tb_fechaRenta = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.tb_fechaInicio = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
             this.nbarco = new System.Windows.Forms.TabPage();
             this.act_barco = new System.Windows.Forms.Button();
             this.n_barco = new System.Windows.Forms.Button();
@@ -96,6 +83,7 @@ namespace ProyectoRentaDeBarcos
             this.ColumnOcupado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Actualizar = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.act_btn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.n_emp_btn = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
@@ -122,22 +110,9 @@ namespace ProyectoRentaDeBarcos
             this.telefonoPropietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoPropietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_salirPropietario = new System.Windows.Forms.Button();
-            this.btn_limpiarPropietario = new System.Windows.Forms.Button();
             this.btn_eliminarPropietario = new System.Windows.Forms.Button();
             this.btn_actualizarPropietario = new System.Windows.Forms.Button();
             this.btn_agregarPropietario = new System.Windows.Forms.Button();
-            this.tb_correoPropietario = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.tb_telefonoPropietario = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.tb_apellidoMPropietario = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.tb_IdPropietario = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.tb_nombrePropietario = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.tb_apellidoPPropietario = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label48 = new System.Windows.Forms.Label();
             this.tb_buscarT = new System.Windows.Forms.TextBox();
@@ -159,7 +134,8 @@ namespace ProyectoRentaDeBarcos
             this.label45 = new System.Windows.Forms.Label();
             this.tb_cargo = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.act_btn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.ncliente_btn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_registroClientes)).BeginInit();
@@ -357,26 +333,14 @@ namespace ProyectoRentaDeBarcos
             // 
             // tabRentas
             // 
+            this.tabRentas.Controls.Add(this.button3);
             this.tabRentas.Controls.Add(this.label43);
             this.tabRentas.Controls.Add(this.tb_buscarRentas);
             this.tabRentas.Controls.Add(this.dgv_registroRentas);
             this.tabRentas.Controls.Add(this.btn_salirRenta);
-            this.tabRentas.Controls.Add(this.btn_limpiarRenta);
             this.tabRentas.Controls.Add(this.btn_eliminarRenta);
             this.tabRentas.Controls.Add(this.btn_actualizarRenta);
             this.tabRentas.Controls.Add(this.btn_agregarRenta);
-            this.tabRentas.Controls.Add(this.tb_Barco);
-            this.tabRentas.Controls.Add(this.label42);
-            this.tabRentas.Controls.Add(this.tb_Cliente);
-            this.tabRentas.Controls.Add(this.label41);
-            this.tabRentas.Controls.Add(this.tb_fechaFin);
-            this.tabRentas.Controls.Add(this.label40);
-            this.tabRentas.Controls.Add(this.tb_NumRenta);
-            this.tabRentas.Controls.Add(this.label39);
-            this.tabRentas.Controls.Add(this.tb_fechaRenta);
-            this.tabRentas.Controls.Add(this.label38);
-            this.tabRentas.Controls.Add(this.tb_fechaInicio);
-            this.tabRentas.Controls.Add(this.label37);
             this.tabRentas.Location = new System.Drawing.Point(4, 22);
             this.tabRentas.Name = "tabRentas";
             this.tabRentas.Padding = new System.Windows.Forms.Padding(3);
@@ -413,7 +377,7 @@ namespace ProyectoRentaDeBarcos
             this.fechaFin,
             this.Cliente,
             this.Barco});
-            this.dgv_registroRentas.Location = new System.Drawing.Point(6, 39);
+            this.dgv_registroRentas.Location = new System.Drawing.Point(22, 39);
             this.dgv_registroRentas.Name = "dgv_registroRentas";
             this.dgv_registroRentas.Size = new System.Drawing.Size(642, 196);
             this.dgv_registroRentas.TabIndex = 17;
@@ -451,7 +415,7 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_salirRenta
             // 
-            this.btn_salirRenta.Location = new System.Drawing.Point(739, 314);
+            this.btn_salirRenta.Location = new System.Drawing.Point(589, 277);
             this.btn_salirRenta.Name = "btn_salirRenta";
             this.btn_salirRenta.Size = new System.Drawing.Size(75, 23);
             this.btn_salirRenta.TabIndex = 16;
@@ -459,19 +423,9 @@ namespace ProyectoRentaDeBarcos
             this.btn_salirRenta.UseVisualStyleBackColor = true;
             this.btn_salirRenta.Click += new System.EventHandler(this.btn_salirRenta_Click);
             // 
-            // btn_limpiarRenta
-            // 
-            this.btn_limpiarRenta.Location = new System.Drawing.Point(739, 264);
-            this.btn_limpiarRenta.Name = "btn_limpiarRenta";
-            this.btn_limpiarRenta.Size = new System.Drawing.Size(75, 23);
-            this.btn_limpiarRenta.TabIndex = 15;
-            this.btn_limpiarRenta.Text = "Limpiar";
-            this.btn_limpiarRenta.UseVisualStyleBackColor = true;
-            this.btn_limpiarRenta.Click += new System.EventHandler(this.btn_limpiarRenta_Click);
-            // 
             // btn_eliminarRenta
             // 
-            this.btn_eliminarRenta.Location = new System.Drawing.Point(606, 365);
+            this.btn_eliminarRenta.Location = new System.Drawing.Point(184, 253);
             this.btn_eliminarRenta.Name = "btn_eliminarRenta";
             this.btn_eliminarRenta.Size = new System.Drawing.Size(75, 23);
             this.btn_eliminarRenta.TabIndex = 14;
@@ -481,7 +435,7 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_actualizarRenta
             // 
-            this.btn_actualizarRenta.Location = new System.Drawing.Point(606, 315);
+            this.btn_actualizarRenta.Location = new System.Drawing.Point(103, 253);
             this.btn_actualizarRenta.Name = "btn_actualizarRenta";
             this.btn_actualizarRenta.Size = new System.Drawing.Size(75, 23);
             this.btn_actualizarRenta.TabIndex = 13;
@@ -491,113 +445,13 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_agregarRenta
             // 
-            this.btn_agregarRenta.Location = new System.Drawing.Point(606, 263);
+            this.btn_agregarRenta.Location = new System.Drawing.Point(22, 253);
             this.btn_agregarRenta.Name = "btn_agregarRenta";
             this.btn_agregarRenta.Size = new System.Drawing.Size(75, 23);
             this.btn_agregarRenta.TabIndex = 12;
             this.btn_agregarRenta.Text = "Agregar";
             this.btn_agregarRenta.UseVisualStyleBackColor = true;
             this.btn_agregarRenta.Click += new System.EventHandler(this.btn_agregarRenta_Click);
-            // 
-            // tb_Barco
-            // 
-            this.tb_Barco.Location = new System.Drawing.Point(177, 368);
-            this.tb_Barco.Name = "tb_Barco";
-            this.tb_Barco.Size = new System.Drawing.Size(100, 20);
-            this.tb_Barco.TabIndex = 11;
-            this.tb_Barco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Barco_KeyPress);
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(205, 349);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(35, 13);
-            this.label42.TabIndex = 10;
-            this.label42.Text = "Barco";
-            this.label42.Click += new System.EventHandler(this.label42_Click);
-            // 
-            // tb_Cliente
-            // 
-            this.tb_Cliente.Location = new System.Drawing.Point(177, 317);
-            this.tb_Cliente.Name = "tb_Cliente";
-            this.tb_Cliente.Size = new System.Drawing.Size(100, 20);
-            this.tb_Cliente.TabIndex = 9;
-            this.tb_Cliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Cliente_KeyPress);
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(205, 298);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(39, 13);
-            this.label41.TabIndex = 8;
-            this.label41.Text = "Cliente";
-            // 
-            // tb_fechaFin
-            // 
-            this.tb_fechaFin.Location = new System.Drawing.Point(177, 266);
-            this.tb_fechaFin.Name = "tb_fechaFin";
-            this.tb_fechaFin.Size = new System.Drawing.Size(100, 20);
-            this.tb_fechaFin.TabIndex = 7;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(205, 247);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(48, 13);
-            this.label40.TabIndex = 6;
-            this.label40.Text = "fechaFin";
-            // 
-            // tb_NumRenta
-            // 
-            this.tb_NumRenta.Location = new System.Drawing.Point(22, 266);
-            this.tb_NumRenta.Name = "tb_NumRenta";
-            this.tb_NumRenta.ReadOnly = true;
-            this.tb_NumRenta.Size = new System.Drawing.Size(100, 20);
-            this.tb_NumRenta.TabIndex = 5;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(50, 247);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(58, 13);
-            this.label39.TabIndex = 4;
-            this.label39.Text = "NumRenta";
-            // 
-            // tb_fechaRenta
-            // 
-            this.tb_fechaRenta.Location = new System.Drawing.Point(22, 317);
-            this.tb_fechaRenta.Name = "tb_fechaRenta";
-            this.tb_fechaRenta.Size = new System.Drawing.Size(100, 20);
-            this.tb_fechaRenta.TabIndex = 3;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(50, 298);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(63, 13);
-            this.label38.TabIndex = 2;
-            this.label38.Text = "fechaRenta";
-            // 
-            // tb_fechaInicio
-            // 
-            this.tb_fechaInicio.Location = new System.Drawing.Point(22, 368);
-            this.tb_fechaInicio.Name = "tb_fechaInicio";
-            this.tb_fechaInicio.Size = new System.Drawing.Size(100, 20);
-            this.tb_fechaInicio.TabIndex = 1;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(50, 349);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(59, 13);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "fechaInicio";
             // 
             // nbarco
             // 
@@ -777,6 +631,16 @@ namespace ProyectoRentaDeBarcos
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // act_btn
+            // 
+            this.act_btn.Location = new System.Drawing.Point(162, 246);
+            this.act_btn.Name = "act_btn";
+            this.act_btn.Size = new System.Drawing.Size(75, 23);
+            this.act_btn.TabIndex = 26;
+            this.act_btn.Text = "Actualizar";
+            this.act_btn.UseVisualStyleBackColor = true;
+            this.act_btn.Click += new System.EventHandler(this.act_btn_Click);
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
@@ -896,26 +760,14 @@ namespace ProyectoRentaDeBarcos
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label36);
             this.tabPage2.Controls.Add(this.tb_buscarPropietario);
             this.tabPage2.Controls.Add(this.dgv_registroPropietario);
             this.tabPage2.Controls.Add(this.btn_salirPropietario);
-            this.tabPage2.Controls.Add(this.btn_limpiarPropietario);
             this.tabPage2.Controls.Add(this.btn_eliminarPropietario);
             this.tabPage2.Controls.Add(this.btn_actualizarPropietario);
             this.tabPage2.Controls.Add(this.btn_agregarPropietario);
-            this.tabPage2.Controls.Add(this.tb_correoPropietario);
-            this.tabPage2.Controls.Add(this.label35);
-            this.tabPage2.Controls.Add(this.tb_telefonoPropietario);
-            this.tabPage2.Controls.Add(this.label34);
-            this.tabPage2.Controls.Add(this.tb_apellidoMPropietario);
-            this.tabPage2.Controls.Add(this.label33);
-            this.tabPage2.Controls.Add(this.tb_IdPropietario);
-            this.tabPage2.Controls.Add(this.label32);
-            this.tabPage2.Controls.Add(this.tb_nombrePropietario);
-            this.tabPage2.Controls.Add(this.label31);
-            this.tabPage2.Controls.Add(this.tb_apellidoPPropietario);
-            this.tabPage2.Controls.Add(this.label30);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -989,7 +841,7 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_salirPropietario
             // 
-            this.btn_salirPropietario.Location = new System.Drawing.Point(747, 312);
+            this.btn_salirPropietario.Location = new System.Drawing.Point(573, 274);
             this.btn_salirPropietario.Name = "btn_salirPropietario";
             this.btn_salirPropietario.Size = new System.Drawing.Size(75, 23);
             this.btn_salirPropietario.TabIndex = 16;
@@ -997,19 +849,9 @@ namespace ProyectoRentaDeBarcos
             this.btn_salirPropietario.UseVisualStyleBackColor = true;
             this.btn_salirPropietario.Click += new System.EventHandler(this.btn_salirPropietario_Click);
             // 
-            // btn_limpiarPropietario
-            // 
-            this.btn_limpiarPropietario.Location = new System.Drawing.Point(747, 259);
-            this.btn_limpiarPropietario.Name = "btn_limpiarPropietario";
-            this.btn_limpiarPropietario.Size = new System.Drawing.Size(75, 23);
-            this.btn_limpiarPropietario.TabIndex = 15;
-            this.btn_limpiarPropietario.Text = "Limpiar";
-            this.btn_limpiarPropietario.UseVisualStyleBackColor = true;
-            this.btn_limpiarPropietario.Click += new System.EventHandler(this.btn_limpiarPropietario_Click);
-            // 
             // btn_eliminarPropietario
             // 
-            this.btn_eliminarPropietario.Location = new System.Drawing.Point(622, 361);
+            this.btn_eliminarPropietario.Location = new System.Drawing.Point(191, 242);
             this.btn_eliminarPropietario.Name = "btn_eliminarPropietario";
             this.btn_eliminarPropietario.Size = new System.Drawing.Size(75, 23);
             this.btn_eliminarPropietario.TabIndex = 14;
@@ -1019,7 +861,7 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_actualizarPropietario
             // 
-            this.btn_actualizarPropietario.Location = new System.Drawing.Point(622, 312);
+            this.btn_actualizarPropietario.Location = new System.Drawing.Point(100, 242);
             this.btn_actualizarPropietario.Name = "btn_actualizarPropietario";
             this.btn_actualizarPropietario.Size = new System.Drawing.Size(75, 23);
             this.btn_actualizarPropietario.TabIndex = 13;
@@ -1029,114 +871,13 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_agregarPropietario
             // 
-            this.btn_agregarPropietario.Location = new System.Drawing.Point(622, 259);
+            this.btn_agregarPropietario.Location = new System.Drawing.Point(6, 242);
             this.btn_agregarPropietario.Name = "btn_agregarPropietario";
             this.btn_agregarPropietario.Size = new System.Drawing.Size(75, 23);
             this.btn_agregarPropietario.TabIndex = 12;
             this.btn_agregarPropietario.Text = "Agregar";
             this.btn_agregarPropietario.UseVisualStyleBackColor = true;
             this.btn_agregarPropietario.Click += new System.EventHandler(this.btn_agregarPropietario_Click);
-            // 
-            // tb_correoPropietario
-            // 
-            this.tb_correoPropietario.Location = new System.Drawing.Point(174, 364);
-            this.tb_correoPropietario.Name = "tb_correoPropietario";
-            this.tb_correoPropietario.Size = new System.Drawing.Size(100, 20);
-            this.tb_correoPropietario.TabIndex = 11;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(203, 344);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(37, 13);
-            this.label35.TabIndex = 10;
-            this.label35.Text = "correo";
-            // 
-            // tb_telefonoPropietario
-            // 
-            this.tb_telefonoPropietario.Location = new System.Drawing.Point(174, 312);
-            this.tb_telefonoPropietario.Name = "tb_telefonoPropietario";
-            this.tb_telefonoPropietario.Size = new System.Drawing.Size(100, 20);
-            this.tb_telefonoPropietario.TabIndex = 9;
-            this.tb_telefonoPropietario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_telefonoPropietario_KeyPress);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(203, 292);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(45, 13);
-            this.label34.TabIndex = 8;
-            this.label34.Text = "telefono";
-            // 
-            // tb_apellidoMPropietario
-            // 
-            this.tb_apellidoMPropietario.Location = new System.Drawing.Point(174, 259);
-            this.tb_apellidoMPropietario.Name = "tb_apellidoMPropietario";
-            this.tb_apellidoMPropietario.Size = new System.Drawing.Size(100, 20);
-            this.tb_apellidoMPropietario.TabIndex = 7;
-            this.tb_apellidoMPropietario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_apellidoMPropietario_KeyPress);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(203, 239);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(52, 13);
-            this.label33.TabIndex = 6;
-            this.label33.Text = "apellidoM";
-            // 
-            // tb_IdPropietario
-            // 
-            this.tb_IdPropietario.Location = new System.Drawing.Point(23, 259);
-            this.tb_IdPropietario.Name = "tb_IdPropietario";
-            this.tb_IdPropietario.ReadOnly = true;
-            this.tb_IdPropietario.Size = new System.Drawing.Size(100, 20);
-            this.tb_IdPropietario.TabIndex = 5;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(52, 239);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(66, 13);
-            this.label32.TabIndex = 4;
-            this.label32.Text = "IdPropietario";
-            // 
-            // tb_nombrePropietario
-            // 
-            this.tb_nombrePropietario.Location = new System.Drawing.Point(23, 312);
-            this.tb_nombrePropietario.Name = "tb_nombrePropietario";
-            this.tb_nombrePropietario.Size = new System.Drawing.Size(100, 20);
-            this.tb_nombrePropietario.TabIndex = 3;
-            this.tb_nombrePropietario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_nombrePropietario_KeyPress);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(52, 292);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(42, 13);
-            this.label31.TabIndex = 2;
-            this.label31.Text = "nombre";
-            // 
-            // tb_apellidoPPropietario
-            // 
-            this.tb_apellidoPPropietario.Location = new System.Drawing.Point(23, 364);
-            this.tb_apellidoPPropietario.Name = "tb_apellidoPPropietario";
-            this.tb_apellidoPPropietario.Size = new System.Drawing.Size(100, 20);
-            this.tb_apellidoPPropietario.TabIndex = 1;
-            this.tb_apellidoPPropietario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_apellidoPPropietario_KeyPress);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(52, 344);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(50, 13);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "apellidoP";
             // 
             // tabPage3
             // 
@@ -1334,15 +1075,27 @@ namespace ProyectoRentaDeBarcos
             this.label44.TabIndex = 0;
             this.label44.Text = "cargo";
             // 
-            // act_btn
+            // button2
             // 
-            this.act_btn.Location = new System.Drawing.Point(162, 246);
-            this.act_btn.Name = "act_btn";
-            this.act_btn.Size = new System.Drawing.Size(75, 23);
-            this.act_btn.TabIndex = 26;
-            this.act_btn.Text = "Actualizar";
-            this.act_btn.UseVisualStyleBackColor = true;
-            this.act_btn.Click += new System.EventHandler(this.act_btn_Click);
+            this.button2.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(625, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(23, 23);
+            this.button2.TabIndex = 26;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(641, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(23, 23);
+            this.button3.TabIndex = 27;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // InterfazV2
             // 
@@ -1435,48 +1188,22 @@ namespace ProyectoRentaDeBarcos
         private System.Windows.Forms.TextBox tb_buscarPropietario;
         private System.Windows.Forms.DataGridView dgv_registroPropietario;
         private System.Windows.Forms.Button btn_salirPropietario;
-        private System.Windows.Forms.Button btn_limpiarPropietario;
         private System.Windows.Forms.Button btn_eliminarPropietario;
         private System.Windows.Forms.Button btn_actualizarPropietario;
         private System.Windows.Forms.Button btn_agregarPropietario;
-        private System.Windows.Forms.TextBox tb_correoPropietario;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox tb_telefonoPropietario;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox tb_apellidoMPropietario;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox tb_IdPropietario;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox tb_nombrePropietario;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox tb_apellidoPPropietario;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdPropietario;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePropietario;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPPropietario;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMPropietario;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoPropietario;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoPropietario;
-        private System.Windows.Forms.TextBox tb_fechaInicio;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox tb_buscarRentas;
         private System.Windows.Forms.DataGridView dgv_registroRentas;
         private System.Windows.Forms.Button btn_salirRenta;
-        private System.Windows.Forms.Button btn_limpiarRenta;
         private System.Windows.Forms.Button btn_eliminarRenta;
         private System.Windows.Forms.Button btn_actualizarRenta;
         private System.Windows.Forms.Button btn_agregarRenta;
-        private System.Windows.Forms.TextBox tb_Barco;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox tb_Cliente;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox tb_fechaFin;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox tb_NumRenta;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox tb_fechaRenta;
-        private System.Windows.Forms.Label label38;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumRenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaRenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicio;
@@ -1511,5 +1238,7 @@ namespace ProyectoRentaDeBarcos
         private System.Windows.Forms.Button n_emp_btn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button act_btn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
