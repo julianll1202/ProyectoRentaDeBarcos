@@ -70,6 +70,29 @@ namespace ProyectoRentaDeBarcos
             return mEmpleados;
         }
 
+        public List<int> getNumEmpleados()
+        {
+            List<int> empleados = new List<int>();
+            string QUERY = "CALL getNumEmpleados();";
+            MySqlDataReader mReader = null;
+            try
+            {
+                MySqlCommand mComando = new MySqlCommand(QUERY);
+                mComando.Connection = conexionMysql.GetConnection();
+                mReader = mComando.ExecuteReader();
+
+                while (mReader.Read())
+                {
+                    empleados.Add(mReader.GetInt16("NumEmpleado"));
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return empleados;
+        }
         internal bool agregarEmpleado(Empleado mEmpleado)
         {
             string INSERT = "CALL nuevoEmpleado(@nombre, @apellidoP, @apellidoM, @rfc, @telefono, @correo, @puesto);";

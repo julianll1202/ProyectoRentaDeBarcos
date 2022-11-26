@@ -115,6 +115,12 @@
     <Compile Include="ActRenta.Designer.cs">
       <DependentUpon>ActRenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActTrip.Designer.cs">
+      <DependentUpon>ActTrip.cs</DependentUpon>
+    </Compile>
     <Compile Include="Barco.cs" />
     <Compile Include="BarcoConsultas.cs" />
     <Compile Include="NuevaRenta.cs">
@@ -122,6 +128,12 @@
     </Compile>
     <Compile Include="NuevaRenta.Designer.cs">
       <DependentUpon>NuevaRenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaTrip.Designer.cs">
+      <DependentUpon>NuevaTrip.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoBarco.cs">
       <SubType>Form</SubType>
@@ -183,11 +195,17 @@
     <EmbeddedResource Include="ActRenta.resx">
       <DependentUpon>ActRenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActTrip.resx">
+      <DependentUpon>ActTrip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfazV2.resx">
       <DependentUpon>InterfazV2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevaRenta.resx">
       <DependentUpon>NuevaRenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaTrip.resx">
+      <DependentUpon>NuevaTrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoBarco.resx">
       <DependentUpon>NuevoBarco.cs</DependentUpon>

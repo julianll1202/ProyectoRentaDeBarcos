@@ -85,7 +85,7 @@ namespace ProyectoRentaDeBarcos
 
         private void agregar_btn_Click(object sender, EventArgs e)
         {
-            label1.Text = lb_clientes.Text;
+            
             cargarDatosRenta();
 
             if (mRentaConsultas.agregarRenta(mRenta))

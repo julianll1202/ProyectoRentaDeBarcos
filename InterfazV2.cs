@@ -47,6 +47,7 @@ namespace ProyectoRentaDeBarcos
         string ap, am, tel, email, st, col, cd, est, cp;
         string r, p;
         string c, b;
+        string nume, car;
         DateTime fr, fi, ff;
         public InterfazV2()
         {
@@ -725,37 +726,25 @@ namespace ProyectoRentaDeBarcos
 
         private void btn_agregarT_Click(object sender, EventArgs e)
         {
-            cargarDatosTripulacion();
+            var form_n_trip = new NuevaTrip();
+            form_n_trip.ShowDialog();
 
-            if (mTripulacionConsultas.agregarTripulacion(mTripulacion))
-            {
-                MessageBox.Show("Tripulación Agregada");
-                cargarTripulaciones();
-                LimpiarCamposTripulaciones();
-            }
+           
         }
-
-        private void LimpiarCamposTripulaciones()
-        {
-            tb_NumRentaT.Text = "";
-            tb_NumEmpleadoT.Text = "";
-            tb_cargo.Text = "";
-            tb_tarifa.Text = "";
-        }
-
+                
         private void cargarDatosTripulacion()
         {
             mTripulacion.NumRentaT = getFolioTripulacionIfExist();
             mTripulacion.NumEmpleadoT = getFolioTripulacion2IfExist();
-            mTripulacion.cargo = tb_cargo.Text.Trim();
-            mTripulacion.tarifa = decimal.Parse(tb_tarifa.Text.Trim());
+            mTripulacion.cargo = car;
+            mTripulacion.tarifa = decimal.Parse(tar);
         }
 
         private int getFolioTripulacionIfExist()
         {
-            if (!tb_NumRentaT.Text.Trim().Equals(""))
+            if (!num.Equals(""))
             {
-                if (int.TryParse(tb_NumRentaT.Text.Trim(), out int folio))
+                if (int.TryParse(num, out int folio))
                 {
                     return folio;
                 }
@@ -769,9 +758,9 @@ namespace ProyectoRentaDeBarcos
 
         private int getFolioTripulacion2IfExist()
         {
-            if (!tb_NumEmpleadoT.Text.Trim().Equals(""))
+            if (!nume.Equals(""))
             {
-                if (int.TryParse(tb_NumEmpleadoT.Text.Trim(), out int folio))
+                if (int.TryParse(nume, out int folio))
                 {
                     return folio;
                 }
@@ -785,23 +774,19 @@ namespace ProyectoRentaDeBarcos
 
         private void btn_actualizarT_Click(object sender, EventArgs e)
         {
-            cargarDatosTripulacion();
+            var form_act_trip = new ActTrip(num, nume, car, tar);
+            form_act_trip.ShowDialog();
 
-            if (mTripulacionConsultas.modificarTripulacion(mTripulacion))
-            {
-                MessageBox.Show("Tripulación Modificada");
-                cargarTripulaciones();
-                LimpiarCamposTripulaciones();
-            }
+            
         }
 
         private void dgv_registroT_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgv_registroT.Rows[e.RowIndex];
-            tb_NumRentaT.Text = Convert.ToString(fila.Cells["NumRentaT"].Value);
-            tb_NumEmpleadoT.Text = Convert.ToString(fila.Cells["NumEmpleadoT"].Value);
-            tb_cargo.Text = Convert.ToString(fila.Cells["cargo"].Value);
-            tb_tarifa.Text = Convert.ToString(fila.Cells["tarifa"].Value);
+            num = Convert.ToString(fila.Cells["NumRentaT"].Value);
+            nume = Convert.ToString(fila.Cells["NumEmpleadoT"].Value);
+            car = Convert.ToString(fila.Cells["cargo"].Value);
+            tar = Convert.ToString(fila.Cells["tarifa"].Value);
         }
 
         private void btn_eliminarT_Click(object sender, EventArgs e)
@@ -825,7 +810,7 @@ namespace ProyectoRentaDeBarcos
                 {
                     MessageBox.Show("Tripulación Eliminada");
                     cargarTripulaciones();
-                    LimpiarCamposTripulaciones();
+                    
                 }
             }
         }
@@ -834,6 +819,11 @@ namespace ProyectoRentaDeBarcos
         {
             var form_n_emp = new NuevoEmp();
             form_n_emp.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            cargarTripulaciones();
         }
 
         private void act_btn_Click(object sender, EventArgs e)
@@ -857,11 +847,7 @@ namespace ProyectoRentaDeBarcos
             cargarEmpleados();
         }
 
-        private void btn_limpiarT_Click(object sender, EventArgs e)
-        {
-            LimpiarCamposTripulaciones();
-        }
-
+       
         private void btn_salirT_Click(object sender, EventArgs e)
         {
             Application.Exit();

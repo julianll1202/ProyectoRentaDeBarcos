@@ -31,7 +31,6 @@ namespace ProyectoRentaDeBarcos
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ncliente_btn = new System.Windows.Forms.TabPage();
-            this.ref_btn = new System.Windows.Forms.Button();
             this.ncliente = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.tb_buscarClientes = new System.Windows.Forms.TextBox();
@@ -81,10 +80,8 @@ namespace ProyectoRentaDeBarcos
             this.ColumnTarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCapacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnOcupado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_Actualizar = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.act_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.n_emp_btn = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
             this.tb_buscarEmpleado = new System.Windows.Forms.TextBox();
@@ -122,20 +119,15 @@ namespace ProyectoRentaDeBarcos
             this.cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_salirT = new System.Windows.Forms.Button();
-            this.btn_limpiarT = new System.Windows.Forms.Button();
             this.btn_eliminarT = new System.Windows.Forms.Button();
             this.btn_actualizarT = new System.Windows.Forms.Button();
             this.btn_agregarT = new System.Windows.Forms.Button();
-            this.tb_tarifa = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.tb_NumRentaT = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.tb_NumEmpleadoT = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.tb_cargo = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ref_btn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btn_Actualizar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.ncliente_btn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_registroClientes)).BeginInit();
@@ -160,10 +152,11 @@ namespace ProyectoRentaDeBarcos
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabControl1.Location = new System.Drawing.Point(14, 13);
+            this.tabControl1.Location = new System.Drawing.Point(19, 16);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(982, 425);
+            this.tabControl1.Size = new System.Drawing.Size(1309, 523);
             this.tabControl1.TabIndex = 0;
             // 
             // ncliente_btn
@@ -176,32 +169,22 @@ namespace ProyectoRentaDeBarcos
             this.ncliente_btn.Controls.Add(this.btn_actualizarCliente);
             this.ncliente_btn.Controls.Add(this.btn_eliminarCliente);
             this.ncliente_btn.Controls.Add(this.btn_salirCliente);
-            this.ncliente_btn.Location = new System.Drawing.Point(4, 22);
+            this.ncliente_btn.Location = new System.Drawing.Point(4, 25);
+            this.ncliente_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ncliente_btn.Name = "ncliente_btn";
-            this.ncliente_btn.Padding = new System.Windows.Forms.Padding(3);
-            this.ncliente_btn.Size = new System.Drawing.Size(974, 399);
+            this.ncliente_btn.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ncliente_btn.Size = new System.Drawing.Size(1301, 494);
             this.ncliente_btn.TabIndex = 0;
             this.ncliente_btn.Text = "Clientes";
             this.ncliente_btn.UseVisualStyleBackColor = true;
             this.ncliente_btn.Click += new System.EventHandler(this.tabClientes_Click);
             // 
-            // ref_btn
-            // 
-            this.ref_btn.BackColor = System.Drawing.Color.Transparent;
-            this.ref_btn.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
-            this.ref_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ref_btn.Location = new System.Drawing.Point(945, 3);
-            this.ref_btn.Name = "ref_btn";
-            this.ref_btn.Size = new System.Drawing.Size(23, 23);
-            this.ref_btn.TabIndex = 31;
-            this.ref_btn.UseVisualStyleBackColor = false;
-            this.ref_btn.Click += new System.EventHandler(this.ref_btn_Click);
-            // 
             // ncliente
             // 
-            this.ncliente.Location = new System.Drawing.Point(6, 234);
+            this.ncliente.Location = new System.Drawing.Point(8, 288);
+            this.ncliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ncliente.Name = "ncliente";
-            this.ncliente.Size = new System.Drawing.Size(146, 23);
+            this.ncliente.Size = new System.Drawing.Size(195, 28);
             this.ncliente.TabIndex = 30;
             this.ncliente.Text = "Nuevo Cliente";
             this.ncliente.UseVisualStyleBackColor = true;
@@ -210,17 +193,19 @@ namespace ProyectoRentaDeBarcos
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(249, 14);
+            this.label20.Location = new System.Drawing.Point(332, 17);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 13);
+            this.label20.Size = new System.Drawing.Size(49, 16);
             this.label20.TabIndex = 29;
             this.label20.Text = "Buscar";
             // 
             // tb_buscarClientes
             // 
-            this.tb_buscarClientes.Location = new System.Drawing.Point(35, 11);
+            this.tb_buscarClientes.Location = new System.Drawing.Point(47, 14);
+            this.tb_buscarClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_buscarClientes.Name = "tb_buscarClientes";
-            this.tb_buscarClientes.Size = new System.Drawing.Size(198, 20);
+            this.tb_buscarClientes.Size = new System.Drawing.Size(263, 22);
             this.tb_buscarClientes.TabIndex = 28;
             this.tb_buscarClientes.TextChanged += new System.EventHandler(this.tb_buscarClientes_TextChanged);
             // 
@@ -239,9 +224,10 @@ namespace ProyectoRentaDeBarcos
             this.calle,
             this.colonia,
             this.codigoPostal});
-            this.dgv_registroClientes.Location = new System.Drawing.Point(6, 37);
+            this.dgv_registroClientes.Location = new System.Drawing.Point(8, 46);
+            this.dgv_registroClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_registroClientes.Name = "dgv_registroClientes";
-            this.dgv_registroClientes.Size = new System.Drawing.Size(962, 177);
+            this.dgv_registroClientes.Size = new System.Drawing.Size(1283, 218);
             this.dgv_registroClientes.TabIndex = 27;
             this.dgv_registroClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroClientes_CellClick);
             this.dgv_registroClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroClientes_CellContentClick);
@@ -303,9 +289,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_actualizarCliente
             // 
-            this.btn_actualizarCliente.Location = new System.Drawing.Point(175, 234);
+            this.btn_actualizarCliente.Location = new System.Drawing.Point(233, 288);
+            this.btn_actualizarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_actualizarCliente.Name = "btn_actualizarCliente";
-            this.btn_actualizarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btn_actualizarCliente.Size = new System.Drawing.Size(100, 28);
             this.btn_actualizarCliente.TabIndex = 26;
             this.btn_actualizarCliente.Text = "Actualizar";
             this.btn_actualizarCliente.UseVisualStyleBackColor = true;
@@ -313,9 +300,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_eliminarCliente
             // 
-            this.btn_eliminarCliente.Location = new System.Drawing.Point(279, 234);
+            this.btn_eliminarCliente.Location = new System.Drawing.Point(372, 288);
+            this.btn_eliminarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminarCliente.Name = "btn_eliminarCliente";
-            this.btn_eliminarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminarCliente.Size = new System.Drawing.Size(100, 28);
             this.btn_eliminarCliente.TabIndex = 25;
             this.btn_eliminarCliente.Text = "Eliminar";
             this.btn_eliminarCliente.UseVisualStyleBackColor = true;
@@ -323,9 +311,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_salirCliente
             // 
-            this.btn_salirCliente.Location = new System.Drawing.Point(818, 299);
+            this.btn_salirCliente.Location = new System.Drawing.Point(1191, 320);
+            this.btn_salirCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_salirCliente.Name = "btn_salirCliente";
-            this.btn_salirCliente.Size = new System.Drawing.Size(75, 23);
+            this.btn_salirCliente.Size = new System.Drawing.Size(100, 28);
             this.btn_salirCliente.TabIndex = 23;
             this.btn_salirCliente.Text = "Salir";
             this.btn_salirCliente.UseVisualStyleBackColor = true;
@@ -341,10 +330,11 @@ namespace ProyectoRentaDeBarcos
             this.tabRentas.Controls.Add(this.btn_eliminarRenta);
             this.tabRentas.Controls.Add(this.btn_actualizarRenta);
             this.tabRentas.Controls.Add(this.btn_agregarRenta);
-            this.tabRentas.Location = new System.Drawing.Point(4, 22);
+            this.tabRentas.Location = new System.Drawing.Point(4, 25);
+            this.tabRentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabRentas.Name = "tabRentas";
-            this.tabRentas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRentas.Size = new System.Drawing.Size(974, 399);
+            this.tabRentas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabRentas.Size = new System.Drawing.Size(1301, 494);
             this.tabRentas.TabIndex = 1;
             this.tabRentas.Text = "Rentas";
             this.tabRentas.UseVisualStyleBackColor = true;
@@ -353,17 +343,19 @@ namespace ProyectoRentaDeBarcos
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(271, 16);
+            this.label43.Location = new System.Drawing.Point(361, 20);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(40, 13);
+            this.label43.Size = new System.Drawing.Size(49, 16);
             this.label43.TabIndex = 19;
             this.label43.Text = "Buscar";
             // 
             // tb_buscarRentas
             // 
-            this.tb_buscarRentas.Location = new System.Drawing.Point(22, 13);
+            this.tb_buscarRentas.Location = new System.Drawing.Point(29, 16);
+            this.tb_buscarRentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_buscarRentas.Name = "tb_buscarRentas";
-            this.tb_buscarRentas.Size = new System.Drawing.Size(224, 20);
+            this.tb_buscarRentas.Size = new System.Drawing.Size(297, 22);
             this.tb_buscarRentas.TabIndex = 18;
             this.tb_buscarRentas.TextChanged += new System.EventHandler(this.tb_buscarRentas_TextChanged);
             // 
@@ -377,9 +369,10 @@ namespace ProyectoRentaDeBarcos
             this.fechaFin,
             this.Cliente,
             this.Barco});
-            this.dgv_registroRentas.Location = new System.Drawing.Point(22, 39);
+            this.dgv_registroRentas.Location = new System.Drawing.Point(29, 48);
+            this.dgv_registroRentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_registroRentas.Name = "dgv_registroRentas";
-            this.dgv_registroRentas.Size = new System.Drawing.Size(642, 196);
+            this.dgv_registroRentas.Size = new System.Drawing.Size(856, 241);
             this.dgv_registroRentas.TabIndex = 17;
             this.dgv_registroRentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroRentas_CellClick);
             // 
@@ -415,9 +408,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_salirRenta
             // 
-            this.btn_salirRenta.Location = new System.Drawing.Point(589, 277);
+            this.btn_salirRenta.Location = new System.Drawing.Point(786, 329);
+            this.btn_salirRenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_salirRenta.Name = "btn_salirRenta";
-            this.btn_salirRenta.Size = new System.Drawing.Size(75, 23);
+            this.btn_salirRenta.Size = new System.Drawing.Size(100, 28);
             this.btn_salirRenta.TabIndex = 16;
             this.btn_salirRenta.Text = "Salir";
             this.btn_salirRenta.UseVisualStyleBackColor = true;
@@ -425,9 +419,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_eliminarRenta
             // 
-            this.btn_eliminarRenta.Location = new System.Drawing.Point(184, 253);
+            this.btn_eliminarRenta.Location = new System.Drawing.Point(245, 311);
+            this.btn_eliminarRenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminarRenta.Name = "btn_eliminarRenta";
-            this.btn_eliminarRenta.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminarRenta.Size = new System.Drawing.Size(100, 28);
             this.btn_eliminarRenta.TabIndex = 14;
             this.btn_eliminarRenta.Text = "Eliminar";
             this.btn_eliminarRenta.UseVisualStyleBackColor = true;
@@ -435,9 +430,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_actualizarRenta
             // 
-            this.btn_actualizarRenta.Location = new System.Drawing.Point(103, 253);
+            this.btn_actualizarRenta.Location = new System.Drawing.Point(137, 311);
+            this.btn_actualizarRenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_actualizarRenta.Name = "btn_actualizarRenta";
-            this.btn_actualizarRenta.Size = new System.Drawing.Size(75, 23);
+            this.btn_actualizarRenta.Size = new System.Drawing.Size(100, 28);
             this.btn_actualizarRenta.TabIndex = 13;
             this.btn_actualizarRenta.Text = "Actualizar";
             this.btn_actualizarRenta.UseVisualStyleBackColor = true;
@@ -445,9 +441,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_agregarRenta
             // 
-            this.btn_agregarRenta.Location = new System.Drawing.Point(22, 253);
+            this.btn_agregarRenta.Location = new System.Drawing.Point(29, 311);
+            this.btn_agregarRenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_agregarRenta.Name = "btn_agregarRenta";
-            this.btn_agregarRenta.Size = new System.Drawing.Size(75, 23);
+            this.btn_agregarRenta.Size = new System.Drawing.Size(100, 28);
             this.btn_agregarRenta.TabIndex = 12;
             this.btn_agregarRenta.Text = "Agregar";
             this.btn_agregarRenta.UseVisualStyleBackColor = true;
@@ -463,10 +460,11 @@ namespace ProyectoRentaDeBarcos
             this.nbarco.Controls.Add(this.textBoxBuscar);
             this.nbarco.Controls.Add(this.dataGridViewRegistro);
             this.nbarco.Controls.Add(this.btn_Actualizar);
-            this.nbarco.Location = new System.Drawing.Point(4, 22);
+            this.nbarco.Location = new System.Drawing.Point(4, 25);
+            this.nbarco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nbarco.Name = "nbarco";
-            this.nbarco.Padding = new System.Windows.Forms.Padding(3);
-            this.nbarco.Size = new System.Drawing.Size(974, 399);
+            this.nbarco.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nbarco.Size = new System.Drawing.Size(1301, 494);
             this.nbarco.TabIndex = 2;
             this.nbarco.Text = "Barcos";
             this.nbarco.UseVisualStyleBackColor = true;
@@ -477,9 +475,10 @@ namespace ProyectoRentaDeBarcos
             this.act_barco.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.act_barco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.act_barco.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.act_barco.Location = new System.Drawing.Point(151, 253);
+            this.act_barco.Location = new System.Drawing.Point(201, 311);
+            this.act_barco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.act_barco.Name = "act_barco";
-            this.act_barco.Size = new System.Drawing.Size(129, 23);
+            this.act_barco.Size = new System.Drawing.Size(172, 28);
             this.act_barco.TabIndex = 42;
             this.act_barco.Text = "Actualizar barco";
             this.act_barco.UseVisualStyleBackColor = false;
@@ -492,9 +491,10 @@ namespace ProyectoRentaDeBarcos
             this.n_barco.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.n_barco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.n_barco.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.n_barco.Location = new System.Drawing.Point(6, 253);
+            this.n_barco.Location = new System.Drawing.Point(8, 311);
+            this.n_barco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.n_barco.Name = "n_barco";
-            this.n_barco.Size = new System.Drawing.Size(129, 23);
+            this.n_barco.Size = new System.Drawing.Size(172, 28);
             this.n_barco.TabIndex = 41;
             this.n_barco.Text = "Nuevo Barco";
             this.n_barco.UseVisualStyleBackColor = false;
@@ -502,9 +502,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_Salir
             // 
-            this.btn_Salir.Location = new System.Drawing.Point(893, 277);
+            this.btn_Salir.Location = new System.Drawing.Point(1191, 320);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(75, 23);
+            this.btn_Salir.Size = new System.Drawing.Size(100, 28);
             this.btn_Salir.TabIndex = 39;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = true;
@@ -512,9 +513,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(299, 253);
+            this.btn_Eliminar.Location = new System.Drawing.Point(399, 311);
+            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Eliminar.Size = new System.Drawing.Size(100, 28);
             this.btn_Eliminar.TabIndex = 37;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
@@ -523,17 +525,19 @@ namespace ProyectoRentaDeBarcos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Location = new System.Drawing.Point(8, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Buscar";
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(52, 13);
+            this.textBoxBuscar.Location = new System.Drawing.Point(69, 16);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(165, 20);
+            this.textBoxBuscar.Size = new System.Drawing.Size(219, 22);
             this.textBoxBuscar.TabIndex = 7;
             this.textBoxBuscar.TextChanged += new System.EventHandler(this.textBoxBuscar_TextChanged);
             // 
@@ -550,9 +554,10 @@ namespace ProyectoRentaDeBarcos
             this.ColumnTarifa,
             this.ColumnCapacidad,
             this.ColumnOcupado});
-            this.dataGridViewRegistro.Location = new System.Drawing.Point(6, 42);
+            this.dataGridViewRegistro.Location = new System.Drawing.Point(8, 52);
+            this.dataGridViewRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewRegistro.Name = "dataGridViewRegistro";
-            this.dataGridViewRegistro.Size = new System.Drawing.Size(962, 188);
+            this.dataGridViewRegistro.Size = new System.Drawing.Size(1283, 231);
             this.dataGridViewRegistro.TabIndex = 1;
             this.dataGridViewRegistro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRegistro_CellClick);
             // 
@@ -601,31 +606,21 @@ namespace ProyectoRentaDeBarcos
             this.ColumnOcupado.HeaderText = "ocupado";
             this.ColumnOcupado.Name = "ColumnOcupado";
             // 
-            // btn_Actualizar
-            // 
-            this.btn_Actualizar.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
-            this.btn_Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Actualizar.Location = new System.Drawing.Point(945, 13);
-            this.btn_Actualizar.Name = "btn_Actualizar";
-            this.btn_Actualizar.Size = new System.Drawing.Size(23, 23);
-            this.btn_Actualizar.TabIndex = 6;
-            this.btn_Actualizar.UseVisualStyleBackColor = true;
-            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.act_btn);
-            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.n_emp_btn);
             this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.tb_buscarEmpleado);
             this.tabPage1.Controls.Add(this.dgv_registroEmpleado);
             this.tabPage1.Controls.Add(this.btn_salirEmpleado);
             this.tabPage1.Controls.Add(this.btn_eliminarEmpleado);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(974, 399);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1301, 494);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Empleados";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -633,30 +628,21 @@ namespace ProyectoRentaDeBarcos
             // 
             // act_btn
             // 
-            this.act_btn.Location = new System.Drawing.Point(162, 246);
+            this.act_btn.Location = new System.Drawing.Point(216, 303);
+            this.act_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.act_btn.Name = "act_btn";
-            this.act_btn.Size = new System.Drawing.Size(75, 23);
+            this.act_btn.Size = new System.Drawing.Size(100, 28);
             this.act_btn.TabIndex = 26;
             this.act_btn.Text = "Actualizar";
             this.act_btn.UseVisualStyleBackColor = true;
             this.act_btn.Click += new System.EventHandler(this.act_btn_Click);
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(827, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 25;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // n_emp_btn
             // 
-            this.n_emp_btn.Location = new System.Drawing.Point(8, 246);
+            this.n_emp_btn.Location = new System.Drawing.Point(11, 303);
+            this.n_emp_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.n_emp_btn.Name = "n_emp_btn";
-            this.n_emp_btn.Size = new System.Drawing.Size(136, 23);
+            this.n_emp_btn.Size = new System.Drawing.Size(181, 28);
             this.n_emp_btn.TabIndex = 24;
             this.n_emp_btn.Text = "Nuevo Empleado";
             this.n_emp_btn.UseVisualStyleBackColor = true;
@@ -665,18 +651,20 @@ namespace ProyectoRentaDeBarcos
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(242, 19);
+            this.label29.Location = new System.Drawing.Point(323, 23);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(40, 13);
+            this.label29.Size = new System.Drawing.Size(49, 16);
             this.label29.TabIndex = 23;
             this.label29.Text = "Buscar";
             this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // tb_buscarEmpleado
             // 
-            this.tb_buscarEmpleado.Location = new System.Drawing.Point(22, 16);
+            this.tb_buscarEmpleado.Location = new System.Drawing.Point(29, 20);
+            this.tb_buscarEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_buscarEmpleado.Name = "tb_buscarEmpleado";
-            this.tb_buscarEmpleado.Size = new System.Drawing.Size(197, 20);
+            this.tb_buscarEmpleado.Size = new System.Drawing.Size(261, 22);
             this.tb_buscarEmpleado.TabIndex = 22;
             this.tb_buscarEmpleado.TextChanged += new System.EventHandler(this.tb_buscarEmpleado_TextChanged);
             // 
@@ -692,9 +680,10 @@ namespace ProyectoRentaDeBarcos
             this.telefonoEmpleado,
             this.correoEmpleado,
             this.puesto});
-            this.dgv_registroEmpleado.Location = new System.Drawing.Point(8, 42);
+            this.dgv_registroEmpleado.Location = new System.Drawing.Point(11, 52);
+            this.dgv_registroEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_registroEmpleado.Name = "dgv_registroEmpleado";
-            this.dgv_registroEmpleado.Size = new System.Drawing.Size(842, 189);
+            this.dgv_registroEmpleado.Size = new System.Drawing.Size(1123, 233);
             this.dgv_registroEmpleado.TabIndex = 21;
             this.dgv_registroEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroEmpleado_CellClick);
             // 
@@ -740,9 +729,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_salirEmpleado
             // 
-            this.btn_salirEmpleado.Location = new System.Drawing.Point(719, 309);
+            this.btn_salirEmpleado.Location = new System.Drawing.Point(1034, 320);
+            this.btn_salirEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_salirEmpleado.Name = "btn_salirEmpleado";
-            this.btn_salirEmpleado.Size = new System.Drawing.Size(75, 23);
+            this.btn_salirEmpleado.Size = new System.Drawing.Size(100, 28);
             this.btn_salirEmpleado.TabIndex = 20;
             this.btn_salirEmpleado.Text = "Salir";
             this.btn_salirEmpleado.UseVisualStyleBackColor = true;
@@ -750,9 +740,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_eliminarEmpleado
             // 
-            this.btn_eliminarEmpleado.Location = new System.Drawing.Point(584, 361);
+            this.btn_eliminarEmpleado.Location = new System.Drawing.Point(338, 303);
+            this.btn_eliminarEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminarEmpleado.Name = "btn_eliminarEmpleado";
-            this.btn_eliminarEmpleado.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminarEmpleado.Size = new System.Drawing.Size(100, 28);
             this.btn_eliminarEmpleado.TabIndex = 18;
             this.btn_eliminarEmpleado.Text = "Eliminar";
             this.btn_eliminarEmpleado.UseVisualStyleBackColor = true;
@@ -768,10 +759,11 @@ namespace ProyectoRentaDeBarcos
             this.tabPage2.Controls.Add(this.btn_eliminarPropietario);
             this.tabPage2.Controls.Add(this.btn_actualizarPropietario);
             this.tabPage2.Controls.Add(this.btn_agregarPropietario);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(974, 399);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1301, 494);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Propietarios";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -779,17 +771,19 @@ namespace ProyectoRentaDeBarcos
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(266, 15);
+            this.label36.Location = new System.Drawing.Point(355, 18);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(40, 13);
+            this.label36.Size = new System.Drawing.Size(49, 16);
             this.label36.TabIndex = 19;
             this.label36.Text = "Buscar";
             // 
             // tb_buscarPropietario
             // 
-            this.tb_buscarPropietario.Location = new System.Drawing.Point(23, 12);
+            this.tb_buscarPropietario.Location = new System.Drawing.Point(31, 15);
+            this.tb_buscarPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_buscarPropietario.Name = "tb_buscarPropietario";
-            this.tb_buscarPropietario.Size = new System.Drawing.Size(221, 20);
+            this.tb_buscarPropietario.Size = new System.Drawing.Size(293, 22);
             this.tb_buscarPropietario.TabIndex = 18;
             this.tb_buscarPropietario.TextChanged += new System.EventHandler(this.tb_buscarPropietario_TextChanged);
             // 
@@ -803,9 +797,10 @@ namespace ProyectoRentaDeBarcos
             this.apellidoMPropietario,
             this.telefonoPropietario,
             this.correoPropietario});
-            this.dgv_registroPropietario.Location = new System.Drawing.Point(6, 38);
+            this.dgv_registroPropietario.Location = new System.Drawing.Point(8, 47);
+            this.dgv_registroPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_registroPropietario.Name = "dgv_registroPropietario";
-            this.dgv_registroPropietario.Size = new System.Drawing.Size(642, 189);
+            this.dgv_registroPropietario.Size = new System.Drawing.Size(856, 233);
             this.dgv_registroPropietario.TabIndex = 17;
             this.dgv_registroPropietario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroPropietario_CellClick);
             // 
@@ -841,9 +836,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_salirPropietario
             // 
-            this.btn_salirPropietario.Location = new System.Drawing.Point(573, 274);
+            this.btn_salirPropietario.Location = new System.Drawing.Point(764, 320);
+            this.btn_salirPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_salirPropietario.Name = "btn_salirPropietario";
-            this.btn_salirPropietario.Size = new System.Drawing.Size(75, 23);
+            this.btn_salirPropietario.Size = new System.Drawing.Size(100, 28);
             this.btn_salirPropietario.TabIndex = 16;
             this.btn_salirPropietario.Text = "Salir";
             this.btn_salirPropietario.UseVisualStyleBackColor = true;
@@ -851,9 +847,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_eliminarPropietario
             // 
-            this.btn_eliminarPropietario.Location = new System.Drawing.Point(191, 242);
+            this.btn_eliminarPropietario.Location = new System.Drawing.Point(255, 298);
+            this.btn_eliminarPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminarPropietario.Name = "btn_eliminarPropietario";
-            this.btn_eliminarPropietario.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminarPropietario.Size = new System.Drawing.Size(100, 28);
             this.btn_eliminarPropietario.TabIndex = 14;
             this.btn_eliminarPropietario.Text = "Eliminar";
             this.btn_eliminarPropietario.UseVisualStyleBackColor = true;
@@ -861,9 +858,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_actualizarPropietario
             // 
-            this.btn_actualizarPropietario.Location = new System.Drawing.Point(100, 242);
+            this.btn_actualizarPropietario.Location = new System.Drawing.Point(133, 298);
+            this.btn_actualizarPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_actualizarPropietario.Name = "btn_actualizarPropietario";
-            this.btn_actualizarPropietario.Size = new System.Drawing.Size(75, 23);
+            this.btn_actualizarPropietario.Size = new System.Drawing.Size(100, 28);
             this.btn_actualizarPropietario.TabIndex = 13;
             this.btn_actualizarPropietario.Text = "Actualizar";
             this.btn_actualizarPropietario.UseVisualStyleBackColor = true;
@@ -871,9 +869,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_agregarPropietario
             // 
-            this.btn_agregarPropietario.Location = new System.Drawing.Point(6, 242);
+            this.btn_agregarPropietario.Location = new System.Drawing.Point(8, 298);
+            this.btn_agregarPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_agregarPropietario.Name = "btn_agregarPropietario";
-            this.btn_agregarPropietario.Size = new System.Drawing.Size(75, 23);
+            this.btn_agregarPropietario.Size = new System.Drawing.Size(100, 28);
             this.btn_agregarPropietario.TabIndex = 12;
             this.btn_agregarPropietario.Text = "Agregar";
             this.btn_agregarPropietario.UseVisualStyleBackColor = true;
@@ -881,26 +880,19 @@ namespace ProyectoRentaDeBarcos
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.label48);
             this.tabPage3.Controls.Add(this.tb_buscarT);
             this.tabPage3.Controls.Add(this.dgv_registroT);
             this.tabPage3.Controls.Add(this.btn_salirT);
-            this.tabPage3.Controls.Add(this.btn_limpiarT);
             this.tabPage3.Controls.Add(this.btn_eliminarT);
             this.tabPage3.Controls.Add(this.btn_actualizarT);
             this.tabPage3.Controls.Add(this.btn_agregarT);
-            this.tabPage3.Controls.Add(this.tb_tarifa);
-            this.tabPage3.Controls.Add(this.label47);
-            this.tabPage3.Controls.Add(this.tb_NumRentaT);
-            this.tabPage3.Controls.Add(this.label46);
-            this.tabPage3.Controls.Add(this.tb_NumEmpleadoT);
-            this.tabPage3.Controls.Add(this.label45);
-            this.tabPage3.Controls.Add(this.tb_cargo);
-            this.tabPage3.Controls.Add(this.label44);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(974, 399);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Size = new System.Drawing.Size(1301, 494);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Tripulaciones";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -909,17 +901,19 @@ namespace ProyectoRentaDeBarcos
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(275, 19);
+            this.label48.Location = new System.Drawing.Point(367, 23);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(40, 13);
+            this.label48.Size = new System.Drawing.Size(49, 16);
             this.label48.TabIndex = 15;
             this.label48.Text = "Buscar";
             // 
             // tb_buscarT
             // 
-            this.tb_buscarT.Location = new System.Drawing.Point(22, 16);
+            this.tb_buscarT.Location = new System.Drawing.Point(29, 20);
+            this.tb_buscarT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_buscarT.Name = "tb_buscarT";
-            this.tb_buscarT.Size = new System.Drawing.Size(226, 20);
+            this.tb_buscarT.Size = new System.Drawing.Size(300, 22);
             this.tb_buscarT.TabIndex = 14;
             this.tb_buscarT.TextChanged += new System.EventHandler(this.tb_buscarT_TextChanged);
             // 
@@ -931,9 +925,10 @@ namespace ProyectoRentaDeBarcos
             this.NumEmpleadoT,
             this.cargo,
             this.tarifa});
-            this.dgv_registroT.Location = new System.Drawing.Point(8, 42);
+            this.dgv_registroT.Location = new System.Drawing.Point(11, 52);
+            this.dgv_registroT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_registroT.Name = "dgv_registroT";
-            this.dgv_registroT.Size = new System.Drawing.Size(442, 193);
+            this.dgv_registroT.Size = new System.Drawing.Size(533, 238);
             this.dgv_registroT.TabIndex = 13;
             this.dgv_registroT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_registroT_CellClick);
             // 
@@ -959,29 +954,21 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_salirT
             // 
-            this.btn_salirT.Location = new System.Drawing.Point(759, 310);
+            this.btn_salirT.Location = new System.Drawing.Point(444, 320);
+            this.btn_salirT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_salirT.Name = "btn_salirT";
-            this.btn_salirT.Size = new System.Drawing.Size(75, 23);
+            this.btn_salirT.Size = new System.Drawing.Size(100, 28);
             this.btn_salirT.TabIndex = 12;
             this.btn_salirT.Text = "Salir";
             this.btn_salirT.UseVisualStyleBackColor = true;
             this.btn_salirT.Click += new System.EventHandler(this.btn_salirT_Click);
             // 
-            // btn_limpiarT
-            // 
-            this.btn_limpiarT.Location = new System.Drawing.Point(759, 260);
-            this.btn_limpiarT.Name = "btn_limpiarT";
-            this.btn_limpiarT.Size = new System.Drawing.Size(75, 23);
-            this.btn_limpiarT.TabIndex = 11;
-            this.btn_limpiarT.Text = "Limpiar";
-            this.btn_limpiarT.UseVisualStyleBackColor = true;
-            this.btn_limpiarT.Click += new System.EventHandler(this.btn_limpiarT_Click);
-            // 
             // btn_eliminarT
             // 
-            this.btn_eliminarT.Location = new System.Drawing.Point(621, 361);
+            this.btn_eliminarT.Location = new System.Drawing.Point(262, 298);
+            this.btn_eliminarT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminarT.Name = "btn_eliminarT";
-            this.btn_eliminarT.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminarT.Size = new System.Drawing.Size(100, 28);
             this.btn_eliminarT.TabIndex = 10;
             this.btn_eliminarT.Text = "Eliminar";
             this.btn_eliminarT.UseVisualStyleBackColor = true;
@@ -989,9 +976,10 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_actualizarT
             // 
-            this.btn_actualizarT.Location = new System.Drawing.Point(621, 310);
+            this.btn_actualizarT.Location = new System.Drawing.Point(140, 298);
+            this.btn_actualizarT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_actualizarT.Name = "btn_actualizarT";
-            this.btn_actualizarT.Size = new System.Drawing.Size(75, 23);
+            this.btn_actualizarT.Size = new System.Drawing.Size(100, 28);
             this.btn_actualizarT.TabIndex = 9;
             this.btn_actualizarT.Text = "Actualizar";
             this.btn_actualizarT.UseVisualStyleBackColor = true;
@@ -999,112 +987,97 @@ namespace ProyectoRentaDeBarcos
             // 
             // btn_agregarT
             // 
-            this.btn_agregarT.Location = new System.Drawing.Point(621, 259);
+            this.btn_agregarT.Location = new System.Drawing.Point(11, 298);
+            this.btn_agregarT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_agregarT.Name = "btn_agregarT";
-            this.btn_agregarT.Size = new System.Drawing.Size(75, 23);
+            this.btn_agregarT.Size = new System.Drawing.Size(100, 28);
             this.btn_agregarT.TabIndex = 8;
             this.btn_agregarT.Text = "Agregar";
             this.btn_agregarT.UseVisualStyleBackColor = true;
             this.btn_agregarT.Click += new System.EventHandler(this.btn_agregarT_Click);
             // 
-            // tb_tarifa
+            // ref_btn
             // 
-            this.tb_tarifa.Location = new System.Drawing.Point(177, 262);
-            this.tb_tarifa.Name = "tb_tarifa";
-            this.tb_tarifa.Size = new System.Drawing.Size(100, 20);
-            this.tb_tarifa.TabIndex = 7;
-            this.tb_tarifa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_tarifa_KeyPress);
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(207, 243);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(30, 13);
-            this.label47.TabIndex = 6;
-            this.label47.Text = "tarifa";
-            // 
-            // tb_NumRentaT
-            // 
-            this.tb_NumRentaT.Location = new System.Drawing.Point(22, 262);
-            this.tb_NumRentaT.Name = "tb_NumRentaT";
-            this.tb_NumRentaT.Size = new System.Drawing.Size(100, 20);
-            this.tb_NumRentaT.TabIndex = 5;
-            this.tb_NumRentaT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_numRentaT_KeyPress);
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(52, 243);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(58, 13);
-            this.label46.TabIndex = 4;
-            this.label46.Text = "NumRenta";
-            // 
-            // tb_NumEmpleadoT
-            // 
-            this.tb_NumEmpleadoT.Location = new System.Drawing.Point(22, 313);
-            this.tb_NumEmpleadoT.Name = "tb_NumEmpleadoT";
-            this.tb_NumEmpleadoT.Size = new System.Drawing.Size(100, 20);
-            this.tb_NumEmpleadoT.TabIndex = 3;
-            this.tb_NumEmpleadoT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_NumEmpleadoT_KeyPress);
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(52, 294);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(76, 13);
-            this.label45.TabIndex = 2;
-            this.label45.Text = "NumEmpleado";
-            // 
-            // tb_cargo
-            // 
-            this.tb_cargo.Location = new System.Drawing.Point(22, 364);
-            this.tb_cargo.Name = "tb_cargo";
-            this.tb_cargo.Size = new System.Drawing.Size(100, 20);
-            this.tb_cargo.TabIndex = 1;
-            this.tb_cargo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_cargo_KeyPress);
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(52, 345);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(34, 13);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "cargo";
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(625, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(23, 23);
-            this.button2.TabIndex = 26;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ref_btn.BackColor = System.Drawing.Color.Transparent;
+            this.ref_btn.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.ref_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ref_btn.Location = new System.Drawing.Point(1260, 4);
+            this.ref_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.ref_btn.Name = "ref_btn";
+            this.ref_btn.Size = new System.Drawing.Size(31, 28);
+            this.ref_btn.TabIndex = 31;
+            this.ref_btn.UseVisualStyleBackColor = false;
+            this.ref_btn.Click += new System.EventHandler(this.ref_btn_Click);
             // 
             // button3
             // 
             this.button3.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(641, 13);
+            this.button3.Location = new System.Drawing.Point(855, 16);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(23, 23);
+            this.button3.Size = new System.Drawing.Size(31, 28);
             this.button3.TabIndex = 27;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // btn_Actualizar
+            // 
+            this.btn_Actualizar.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.btn_Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Actualizar.Location = new System.Drawing.Point(1260, 16);
+            this.btn_Actualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Actualizar.Name = "btn_Actualizar";
+            this.btn_Actualizar.Size = new System.Drawing.Size(31, 28);
+            this.btn_Actualizar.TabIndex = 6;
+            this.btn_Actualizar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(1103, 16);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 28);
+            this.button1.TabIndex = 25;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(833, 11);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(31, 28);
+            this.button2.TabIndex = 26;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::ProyectoRentaDeBarcos.Properties.Resources.reload;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(467, 20);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(31, 28);
+            this.button4.TabIndex = 27;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // InterfazV2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 450);
+            this.ClientSize = new System.Drawing.Size(1344, 402);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "InterfazV2";
             this.Text = "InterfazV2";
             this.Load += new System.EventHandler(this.InterfazV2_Load);
@@ -1211,22 +1184,13 @@ namespace ProyectoRentaDeBarcos
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barco;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox tb_cargo;
-        private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.TextBox tb_buscarT;
         private System.Windows.Forms.DataGridView dgv_registroT;
         private System.Windows.Forms.Button btn_salirT;
-        private System.Windows.Forms.Button btn_limpiarT;
         private System.Windows.Forms.Button btn_eliminarT;
         private System.Windows.Forms.Button btn_actualizarT;
         private System.Windows.Forms.Button btn_agregarT;
-        private System.Windows.Forms.TextBox tb_tarifa;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox tb_NumRentaT;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox tb_NumEmpleadoT;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumRentaT;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumEmpleadoT;
         private System.Windows.Forms.DataGridViewTextBoxColumn cargo;
@@ -1240,5 +1204,6 @@ namespace ProyectoRentaDeBarcos
         private System.Windows.Forms.Button act_btn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
