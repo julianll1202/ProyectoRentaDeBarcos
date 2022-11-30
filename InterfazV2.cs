@@ -162,11 +162,7 @@ namespace ProyectoRentaDeBarcos
             Application.Exit();
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
+   
         private void tb_propietario_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloNumeros(e);
@@ -272,11 +268,7 @@ namespace ProyectoRentaDeBarcos
             form_act_cliente.ShowDialog();
         }
 
-        private void dgv_registroClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        
         private void dgv_registroClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgv_registroClientes.Rows[e.RowIndex];
@@ -318,10 +310,7 @@ namespace ProyectoRentaDeBarcos
 
         }
 
-        private void label29_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
         private void tb_NombreCliente_KeyPress(object sender, KeyPressEventArgs e)
@@ -497,9 +486,7 @@ namespace ProyectoRentaDeBarcos
         {
             var form_n_prop = new NuevoProp();
             form_n_prop.ShowDialog();
-        }
-
-        
+        }   
 
         private void cargarDatosPropietario()
         {
@@ -510,9 +497,7 @@ namespace ProyectoRentaDeBarcos
             mPropietario.telefonoPropietario = tel;
             mPropietario.correoPropietario = email;
         }
-
-        
-
+                
         private void btn_actualizarPropietario_Click(object sender, EventArgs e)
         {
             var form_act_prop = new ActProp(num, nom, ap, am, tel, email);
@@ -552,11 +537,6 @@ namespace ProyectoRentaDeBarcos
         }
 
         private void tabRentas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label42_Click(object sender, EventArgs e)
         {
 
         }
@@ -815,6 +795,7 @@ namespace ProyectoRentaDeBarcos
             }
         }
 
+        
         private void n_emp_btn_Click(object sender, EventArgs e)
         {
             var form_n_emp = new NuevoEmp();
